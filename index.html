@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+    <!-- Importaciones -->
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="assets/js/staff.js" type="text/javascript"></script>
+    <script src="assets/js/workshops.js" type="text/javascript"></script>
+    <script src="assets/js/projects.js" type="text/javascript"></script>
+    
+
+
+    <title>Google I/O Extended</title>
+</head>
+<body>
+    <span id="background" class="background">
+    </span>
+    <span class="title-container">
+        <span class="inner-container">
+            <span id="title-container" class="title-container no-select">
+                <span class="title">
+                    <!-- <img id="innovation-logo" class="innovation-logo" src="" alt=""> -->
+                    Google I/O Extended
+                </span>
+                <span class="date">
+                    30 - 31 de mayo
+                </span>
+                <span class="title-menu">
+                    <a id="home-access" class="btn-menu">Home</a>
+                    <a id="staff-access" class="btn-menu pink">Staff</a>
+                    <a id="projects-access" class="btn-menu">Projects</a>
+                    <a id="presentations-access" class="btn-menu">Presentations</a>
+                    <a id="workshops-access" class="btn-menu">Workshops</a>
+                </span>
+            </span>
+        </span>
+    </span>
+    <span id="dynamic-information" class="dynamic-information">
+        <!-- <span class="section-title">
+
+        </span> -->
+        <span class="section-body">
+            
+        </span>
+    </span>
+    <!-- <span id="copyright" class="copyright">© 2019 Laboratorio de Innovacion.</span> -->
+    <span id="galileo-logo" class="galileo-logo">
+        <img src="assets/img/galileo-logo.png" alt="Universidad Galileo">
+    </span>
+    <span id="back-container" class="back-container">
+        <a id="back" class="btn-back">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </span>
+</body>
+</html>
+
+<script>
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Agu', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    function generateHome(){
+        var element = $('#dynamic-information');
+        element.find('.section-title').html('HOME');
+
+        var html = '';
+            html += '<span class="subtitle">';
+            html += 'About the Innovation Lab';
+            html += '</span>';
+            html += '<p>';
+            html += '"Nothing is a mistake. There\'s no win and no fail, there\'s only make." - Corita Kent';
+            html += '</p>';
+            html += '<p>';
+            html += 'The Innovation Lab fosters a unique culture to cultivate curiosity and use creativity as a tool for the development of innovative technology projects. Through an environment characterized by teamwork, ensuring project success through experimentation of new ideas and the explicit permissibility of making mistakes and fail in order to achieve allow members to express themselves, learn, share and grow as a community.';
+            html += '</p>';
+            html += '<p>';
+            html += 'The Lab is committed to see beyond the obvious, we are aware that more important than finding a single correct answer we need to consider all questions as we can imagine and explore different ideas. We like to use design thinking, build prototypes and make use of innovative technologies such as 3D printing, drones, computer vision and augmented reality (Leap Motion, Kinect, Google Glass, Oculus Rift), the Internet of Things (Arduino, Launchpad, BeagleBone Black and RaspberryPi) and bring these technologies together to our experiments. Build circuits, write code, develop software and do the necessary to make things work.';
+            html += '</p>';
+            html += '<p>';
+            html += 'In the pursuit of innovation is also required a market and raise awareness in people that would be users of this technology that eventually will become products that people can receive and improve their lifestyle. Therefore, the Lab also has a commitment to promoting entrepreneurship and creating startups. The startups that the Lab supports work in the area of ​​technology because we believe that is the way to have a tangible and short-term change at all levels.';
+            html += '</p>';
+            html += '<span class="subtitle">';
+            html += 'Why Innovation?';
+            html += '</span>';
+            html += '<p>In 2016, Guatemala is ranked 97th globally in terms of innovation, our score is 27.30/100. Both the global leader (Switzerland) and the Latin American leaders (Chile & Costa Rica) have won their seats by investing on research, technological development and education. For us, there is a great opportunity for improvement in the area of ​​innovation.</p>';
+            html += '<p>Innovation requires novelty, can be a small change (sustained innovation) or a radical ( disruptive innovation) but either way, it will be something new. From my perspective this is achieved through the creativity that is nothing else that imagination put into practice. So to succeed in creating, we make use of innovation in assessing how to provide value and solve the right problems in a better way. We constantly look how to be agents of change and to connect ideas when doing technological development, that’s when we use innovation as our key tool in order that things can be implemented. That is why we decided to implement this effort as a laboratory rather than a department. For since the name suggests action implicit, that practical activities will be conducted and projects will be implemented.</p>';
+        
+        element.find('.section-body').html(html);
+        
+        element.css('opacity', '1');
+        element.css('transform', 'translateY(0)');
+        element.css('z-index', '1');
+    }
+
+    function generateProjects(){
+        var correlative = 0;
+        var element = $('#dynamic-information');
+        element.find('.section-title').html('PROJECTS');
+        var html = '';
+        html += '<span class="projects-container">';
+        projects.forEach(element => {
+            html += `<span id="${correlative}" class="project-card">`;
+            html += `<img src="assets/img/${element.thumbnail}">`;
+            html += '<span class="project-info-container">';
+            html += '<span class="project-name">';
+            html += element.name;
+            html += '</span>';
+            html += '<span class="project-date">';
+            html += months[element.month - 1] + ' ' + element.year
+            html += '</span>';
+            html += '<p class="project-introduction">';
+            html += element.introduction;
+            html += '</p>';
+            html += '</span>';
+            html += '<a class="btn-back">';
+            html += '<i class="fas fa-arrow-up"></i>';
+            html += '</a>';
+            html += '</span>';
+            correlative++;
+        });
+        html += '</span>';
+        html += `<span id="project-information" class="project-information">`;
+        html += '</span>';
+        element.find('.section-body').html(html);
+
+
+        $('.project-card').click((event)=>{
+            element = $(event.currentTarget);
+            if(element.hasClass('expanded')){
+                element.removeClass('expanded');
+                element.parent().removeClass('expanded');
+                $('#background').removeClass('unfocused');
+                element.find('.btn-back').html('<i class="fas fa-arrow-up"></i>');
+                $('#project-information').removeClass('expanded');
+            }else{
+                element.addClass('expanded');
+                element.parent().addClass('expanded');
+                $('#background').addClass('unfocused');
+                element.find('.btn-back').html('<i class="fas fa-plus"></i>');
+
+                html = '';
+                var project = projects[element.attr('id')];
+
+                html += '<span class="project-summary">';
+                html += project.summary;
+                html += '</span>';
+                html += '<p class="project-status">';
+                html += '<i class="fas fa-circle"></i>';
+                html += project.status;
+                html += '</p>';
+                if(typeof(project.video) !== 'undefined'){
+                    html += '<span id="youtube-video" class="youtube-video">';
+                    html += project.video;
+                    html += '</span>';
+                }
+                (project.description).forEach((desc)=>{
+                    html += '<p>';
+                    html += desc;
+                    html += '</p>';
+                });
+                
+                $('#project-information').html(html);
+                if(typeof(project.video) !== 'undefined'){
+                    var video = $('#youtube-video').find('iframe');
+                    video.on('load',()=>{
+                        video.addClass('expanded');
+                    });
+                }
+                $('#project-information').addClass('expanded');
+            }
+        });
+
+        element.css('opacity', '1');
+        element.css('transform', 'translateY(0)');
+        element.css('z-index', '1');
+    }
+
+    function generateWorkshops(){
+        var correlative = 0;
+        var element = $('#dynamic-information');
+        element.find('.section-title').html('WORKSHOPS');
+        var html = '';
+        html += '<span class="workshops-container">';
+        workshops.forEach(element => {
+            html += `<span id="${correlative}" class="workshop-card">`;
+            html += `<img src="assets/img/${element.image}">`;
+            html += '<span class="workshop-info-container">';
+            html += '<span class="workshop-name">';
+            html += element.name;
+            html += '</span>';
+            html += '<span class="workshop-introduction">';
+            html += element.introduction;
+            html += '</span>';
+            html += '</span>';
+            html += '<a class="btn-back">';
+            html += '<i class="fas fa-arrow-up"></i>';
+            html += '</a>';
+            html += '<span class="workshop-duration"><i class="far fa-clock"></i>';
+            html += element.duration;
+            html += '</span>';
+            html += '</span>';
+            correlative++;
+        });
+        html += `<span id="workshop-information" class="workshop-information">`;
+        html += '<p>';
+        html += '</p>';
+        html += '</span>';
+        html += '</span>';
+        element.find('.section-body').html(html);
+
+        $('.workshop-card').click((event)=>{
+            element = event.currentTarget;
+            if($(element).hasClass('expanded')){
+                $(element).removeClass('expanded');
+                $('#background').removeClass('unfocused');
+                $('.workshop-card').each((index, workshop)=>{
+                    if(workshop.id != element.id){
+                        var actualWorkshop = $('#' + workshop.id);
+                        actualWorkshop.css('height', '150px');
+                        actualWorkshop.css('margin', '7.5px 15px');
+                    }else{
+                        var actualWorkshop = $('#' + workshop.id);
+                        actualWorkshop.find('.btn-back').html('<i class="fas fa-arrow-up"></i>');
+                    }
+                });
+                $('#workshop-information').removeClass('expanded');
+            }else{
+                $(element).addClass('expanded');
+                $('#background').addClass('unfocused');
+                $('.workshop-card').each((index, workshop)=>{
+                    if(workshop.id != element.id){
+                        var actualWorkshop = $('#' + workshop.id);
+                        actualWorkshop.css('height', '0');
+                        actualWorkshop.css('margin', '0 15px');
+                    }else{
+                        var actualWorkshop = $('#' + workshop.id);
+                        actualWorkshop.find('.btn-back').html('<i class="fas fa-plus"></i>');
+                    }
+                });
+                html = '';
+                workshops[element.id].information.forEach((element)=>{
+                    html += '<p>';
+                    html += element;
+                    html += '</p>';
+                });
+                html += '<p>';
+                html += '<i class="fas fa-tools"></i>';
+                html += workshops[element.id].tools;
+                html += '</p>';
+                html += '<p>';
+                html += '<i class="far fa-envelope"></i>';
+                var findedStaff;
+                staff.forEach((staffMember)=>{
+                    if(staffMember.name == workshops[element.id].contact){
+                        html += staffMember.email;
+                        findedStaff = staffMember;
+                    }
+                });
+                html += '</p>';
+                html += '<span class="staff">';
+                html += '<span class="staff-image">';
+                html += `<img src="assets/img/${findedStaff.image}">`;
+                html += '</span>';
+                html += '<span class="staff-name">';
+                html += findedStaff.name;
+                html += '</span>';
+                html += '</span>';
+                $('#workshop-information').html(html);
+                $('#workshop-information').addClass('expanded');
+            }
+
+            window.scroll({
+                top: 0, 
+                left: 0, 
+                behavior: 'smooth'
+            });
+        });
+
+        element.css('opacity', '1');
+        element.css('transform', 'translateY(0)');
+        element.css('z-index', '1');
+    }
+
+    function generateStaff(){
+        var element = $('#dynamic-information');
+        //element.find('.section-title').html('STAFF');
+        var html = '';
+        html += '<span class="staff-container">';
+        staff.forEach(element => {
+            html += `<span class="staff-card ${element.job}">`;
+            //html += `<img class="staff-bg" src="assets/img/${element.image}">`;
+            html += '<span class="staff-image">';
+            html += `<img src="assets/img/${element.image}">`;
+            html += '<span class="staff-job">';
+            html += 'Ver más';
+            html += '</span>';
+            html += '</span>';
+            html += '<span class="staff-name">';
+            html += element.name;
+            html += '</span>';
+            html += '<span class="staff-company">';
+            html += 'Universidad Galileo';
+            html += '</span>';
+            html += '<span class="staff-information">';
+            html += '<p>';
+            html += element.information;
+            html += '</p>';
+            html += '</span>';
+            html += '</span>';
+        });
+        html += '</span>';
+        element.find('.section-body').html(html);
+
+        element.css('opacity', '1');
+        element.css('transform', 'translateY(0)');
+        element.css('z-index', '1');
+    }
+
+    function hideIndex(){
+        $('#copyright').css('bottom', '-23px');
+        $('#galileo-logo').css('bottom', '-118px');
+        $('#title-container').css('opacity', '0');
+        $('#title-container').css('transform', 'translateY(20px)');
+        $('#background').css('filter', 'blur(20px) brightness(0.7)');
+        $('#back-container').find('.btn-back').css('transform', 'translateX(0)');
+        $('body').css('overflow-y', 'auto');
+        $('#title-container').css('z-index', '-1');
+
+        window.scroll({
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth'
+        });
+    }
+
+    function showIndex(){
+        $('#copyright').css('bottom', '130px');
+        $('#galileo-logo').css('bottom', '0');
+        var element = $('#title-container');
+        element.css('opacity', '1');
+        element.css('transform', 'translateY(0)');
+        $('#background').css('filter', 'blur(9px) brightness(0.7)');
+        $('#back-container').find('.btn-back').css('transform', 'translateX(-85px)');
+        element = $('#dynamic-information');
+        element.css('opacity', '0');
+        element.css('transform', 'translateY(-40px)');
+        element.css('z-index', 0);
+        $('body').css('overflow-y', 'hidden');
+        $('#title-container').css('z-index', '1');
+        $('#background').removeClass('unfocused');
+        setTimeout(()=>{
+            element.find('.section-body').html('');
+        },400);
+    }
+
+    $(window).resize(()=>{
+        if($(window).width() > 750){
+            $('#innovation-logo').attr('src','assets/img/logo3.png');
+        }else{
+            $('#innovation-logo').attr('src','assets/img/logo.png');
+        }
+    });
+
+    $(document).ready(()=>{
+        $('.background').css('opacity', '1');
+        $('.background').css('transform', 'scale(1.2)');
+
+        console.log();
+        // $('#innovation-logo')[0].onload = ()=>{
+        //     $('#innovation-logo').css('opacity', '1');
+        // };
+
+        if($(window).width() > 750){
+            $('#innovation-logo').attr('src','assets/img/logo3.png');
+        }else{
+            $('#innovation-logo').attr('src','assets/img/logo.png');
+        }
+
+        $('.btn-menu').click((event)=>{
+            //console.log('hola');
+            hideIndex();
+
+            var element = event.target;
+            switch(element.id){
+                case 'home-access':{
+                    generateHome();
+                }break;
+                case 'staff-access':{
+                    generateStaff();
+                }break;
+                case 'projects-access':{
+                    generateProjects();
+                }break;
+                case 'presentations-access':{
+                    console.log('hola');
+                }break;
+                case 'workshops-access':{
+                    generateWorkshops();
+                }break;
+            }
+        });
+
+        $('#back').click(()=>{
+            showIndex();
+        });
+    });
+</script>

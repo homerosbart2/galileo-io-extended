@@ -1,0 +1,1 @@
+var login=1;function updateFormContainer(){console.log(login),1==login?(document.getElementById("login-form").style.display="none",document.getElementById("register-form").style.display="flex",login=0):(document.getElementById("login-form").style.display="flex",document.getElementById("register-form").style.display="none",login=1)}
