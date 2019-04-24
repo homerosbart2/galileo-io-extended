@@ -1074,7 +1074,7 @@ nav {
     filter: blur(40px) brightness(0.7) !important; }
   .background img {
     height: 100vh;
-    margin-right: -5px; }
+    margin-right: -7px; }
 
 .no-select {
   -webkit-touch-callout: none;
@@ -1116,8 +1116,8 @@ body {
     margin: 0 20px; }
     @media only screen and (max-width: 500px) {
       .galileo-logo img {
-        width: 133.3px;
-        height: 52px; } }
+        height: 42px;
+        margin: 0 10px; } }
 
 .copyright {
   position: fixed;
@@ -1258,10 +1258,10 @@ body {
           transition: 0.5s ease; }
           @media only screen and (max-width: 750px) {
             .title-container .inner-container .title-container .title .innovation-logo {
-              width: 400px; } }
+              width: 300px; } }
           @media only screen and (max-width: 650px) {
             .title-container .inner-container .title-container .title .innovation-logo {
-              width: 300px; } }
+              width: 200px; } }
           @media only screen and (max-width: 380px) {
             .title-container .inner-container .title-container .title .innovation-logo {
               width: 200px; } }

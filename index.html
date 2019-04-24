@@ -41,7 +41,6 @@
 </head>
 <body>
     <span id="background" class="background">
-            <img src="assets/img/image93.gif" alt="Universidad Galileo">
     </span>
     <span class="title-container">
         <span class="inner-container">
@@ -78,8 +77,8 @@
     </span>
     <!-- <span id="copyright" class="copyright">© 2019 Laboratorio de Innovacion.</span> -->
     <span id="galileo-logo" class="galileo-logo">
-        <img src="assets/img/logo2.png" alt="Universidad Galileo">
-        <img src="assets/img/galileo-logo.png" alt="Universidad Galileo">
+        <img src="assets/img/logo2stroke.png" alt="Universidad Galileo">
+        <img src="assets/img/galileo-logostroke.png" alt="Universidad Galileo">
     </span>
     <span id="back-container" class="back-container">
         <a id="back" class="btn-back">
@@ -407,14 +406,20 @@
     $(window).resize(()=>{
         if($(window).width() > 750){
             $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
+            $('.background').html('<img src="" alt="">');
+            $('.background').find('img')[0].onload = () => {
+                $('.background').css('opacity', '1');
+                $('.background').css('transform', 'scale(1)');
+            }
+            $('.background').find('img').attr('src','assets/img/image93.gif');
         }else{
-            $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
+            $('#innovation-logo').attr('src','assets/img/logo3.png');
+            $('.background').html('');
         }
     });
 
     $(document).ready(()=>{
-        $('.background').css('opacity', '1');
-        $('.background').css('transform', 'scale(1)');
+        
 
         console.log();
         $('#innovation-logo')[0].onload = ()=>{
@@ -423,8 +428,15 @@
 
         if($(window).width() > 750){
             $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
+            $('.background').html('<img src="" alt="">');
+            $('.background').find('img')[0].onload = () => {
+                $('.background').css('opacity', '1');
+                $('.background').css('transform', 'scale(1)');
+            }
+            $('.background').find('img').attr('src','assets/img/image93.gif');
         }else{
-            $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
+            $('#innovation-logo').attr('src','assets/img/logo3.png');
+            $('.background').html('');
         }
 
         $('.btn-menu').click((event)=>{
