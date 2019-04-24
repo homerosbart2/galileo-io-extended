@@ -406,15 +406,15 @@
 
     $(window).resize(()=>{
         if($(window).width() > 750){
-            $('#innovation-logo').attr('src','assets/img/logo1.png');
+            $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
         }else{
-            $('#innovation-logo').attr('src','assets/img/logo1.png');
+            $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
         }
     });
 
     $(document).ready(()=>{
         $('.background').css('opacity', '1');
-        $('.background').css('transform', 'scale(1.2)');
+        $('.background').css('transform', 'scale(1)');
 
         console.log();
         $('#innovation-logo')[0].onload = ()=>{
@@ -422,9 +422,9 @@
         };
 
         if($(window).width() > 750){
-            $('#innovation-logo').attr('src','assets/img/logo1.png');
+            $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
         }else{
-            $('#innovation-logo').attr('src','assets/img/logo1.png');
+            $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
         }
 
         $('.btn-menu').click((event)=>{
