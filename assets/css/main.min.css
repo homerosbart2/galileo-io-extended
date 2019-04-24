@@ -451,7 +451,7 @@ input[type=file] {
       border: none; }
 
 a {
-  color: #1a73e8;
+  color: #4285f4;
   text-decoration: none;
   outline: 0; }
   a:hover, a:focus {
@@ -469,8 +469,12 @@ img::selection {
 img::-moz-selection {
   background: transparent; }
 
+@font-face {
+  font-family: 'Product';
+  src: url("../../../build/assets/typography/Product Sans Regular.ttf") format("truetype"); }
+
 html {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Product', sans-serif; }
 
 .form-title {
   font-size: 18px; }
@@ -714,7 +718,6 @@ nav {
     width: 200px;
     justify-content: flex-start;
     align-items: center;
-    border-radius: 4px;
     overflow: hidden; }
     .staff-container .staff-card .staff-image {
       position: relative;
@@ -724,20 +727,20 @@ nav {
       width: 150px;
       padding-top: 150px;
       border: 6px solid transparent;
-      transition: 0.4s ease;
+      transition: 0.3s ease;
       cursor: pointer; }
       .staff-container .staff-card .staff-image:hover, .staff-container .staff-card .staff-image:active, .staff-container .staff-card .staff-image:focus {
-        border: 6px solid #1a73e8; }
+        border: 6px solid #4285f4; }
         .staff-container .staff-card .staff-image:hover + .staff-name + .staff-company + .staff-information, .staff-container .staff-card .staff-image:active + .staff-name + .staff-company + .staff-information, .staff-container .staff-card .staff-image:focus + .staff-name + .staff-company + .staff-information {
-          border-bottom: 6px solid #1a73e8; }
+          border-bottom: 6px solid #4285f4; }
         .staff-container .staff-card .staff-image:hover img, .staff-container .staff-card .staff-image:active img, .staff-container .staff-card .staff-image:focus img {
           filter: blur(10px) brightness(0.5) grayscale(100%);
           transform: scale(1.2); }
         .staff-container .staff-card .staff-image:hover .staff-job, .staff-container .staff-card .staff-image:active .staff-job, .staff-container .staff-card .staff-image:focus .staff-job {
           opacity: 1;
-          color: #1a73e8; }
+          color: #4285f4; }
       .staff-container .staff-card .staff-image img {
-        transition: 0.4s ease;
+        transition: 0.3s ease;
         width: 100%;
         height: auto;
         position: absolute;
@@ -747,7 +750,7 @@ nav {
         margin-top: -75px;
         filter: blur(0) brightness(1) grayscale(100%); }
       .staff-container .staff-card .staff-image .staff-job {
-        transition: 0.4s ease;
+        transition: 0.3s ease;
         position: absolute;
         display: flex;
         width: 100%;
@@ -773,7 +776,7 @@ nav {
       z-index: 1;
       display: flex;
       width: 100%;
-      transition: 0.4s ease;
+      transition: 0.3s ease;
       border-bottom: 6px solid transparent; }
       .staff-container .staff-card .staff-information p {
         width: 100%;
@@ -1057,17 +1060,21 @@ nav {
 .background {
   position: fixed;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
   width: 100vw;
   height: 100vh;
   background-size: cover;
   z-index: 0;
-  filter: blur(9px) brightness(0.7);
-  transform: scale(1);
+  transform: scale(1.4);
   opacity: 0;
-  transition: 1.5s ease; }
+  transition: 1s ease; }
   .background.unfocused {
     transition: 0.4s ease;
     filter: blur(40px) brightness(0.7) !important; }
+  .background img {
+    height: 80vh;
+    margin-right: 124px; }
 
 .no-select {
   -webkit-touch-callout: none;
@@ -1099,15 +1106,14 @@ body {
   padding: 20px 0;
   display: flex;
   justify-content: center;
-  background: white;
+  background: transparent;
   width: 100%;
   z-index: 1;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   transition: 0.4s ease; }
   .galileo-logo img {
-    width: 200px;
-    height: 78px;
-    filter: grayscale(100%); }
+    height: 60px;
+    margin: 0 20px; }
     @media only screen and (max-width: 500px) {
       .galileo-logo img {
         width: 133.3px;
@@ -1144,6 +1150,10 @@ body {
     .back-container .btn-back:hover, .back-container .btn-back:active, .back-container .btn-back:focus {
       transform: scale(1.2) !important;
       color: white; }
+
+.dynamic-expanded-information {
+  position: fixed;
+  z-index: 2; }
 
 .dynamic-information {
   padding: 15px 15px 70px 15px;
@@ -1220,6 +1230,8 @@ body {
       flex-direction: column;
       align-items: center;
       width: 600px;
+      opacity: 0;
+      transition: 0.5s ease;
       height: auto;
       padding: 50px 50px;
       justify-content: center;
@@ -1242,8 +1254,8 @@ body {
         .title-container .inner-container .title-container .title .innovation-logo {
           width: 700px;
           height: auto;
-          opacity: 0;
-          transition: 0.3s ease; }
+          opacity: 1;
+          transition: 0.5s ease; }
           @media only screen and (max-width: 750px) {
             .title-container .inner-container .title-container .title .innovation-logo {
               width: 400px; } }
@@ -1263,7 +1275,7 @@ body {
       .title-container .inner-container .title-container .title-menu {
         display: flex;
         justify-content: space-between;
-        transition: transform 0.2s ease, opacity 0.2s ease;
+        transition: transform 0.2s ease, opacity 0.5s ease;
         opacity: 1;
         user-select: none;
         -moz-user-select: none;
@@ -1293,16 +1305,15 @@ body {
           padding: 6px 14px;
           font-size: 15px;
           margin: 5px 0;
-          background: #1a73e8;
-          color: white;
+          background: white;
+          color: #1a73e8;
           border-radius: 4px;
           text-transform: capitalize;
           border-color: #1a73e8; }
           .title-container .inner-container .title-container .title-menu .btn-menu:hover, .title-container .inner-container .title-container .title-menu .btn-menu:active, .title-container .inner-container .title-container .title-menu .btn-menu:focus {
-            color: white;
+            color: white !important;
             background: rgba(26, 115, 232, 0.95);
-            border-color: transparent;
-            box-shadow: 0 2px 4px rgba(26, 115, 232, 0.4); }
+            border-color: #1a73e8; }
           @media only screen and (max-width: 650px) {
             .title-container .inner-container .title-container .title-menu .btn-menu {
               font-size: 12px; } }
@@ -1310,3 +1321,33 @@ body {
             .title-container .inner-container .title-container .title-menu .btn-menu {
               font-size: 11px;
               padding: 5px 10px; } }
+          .title-container .inner-container .title-container .title-menu .btn-menu.gray {
+            border-color: gray !important;
+            color: gray !important; }
+            .title-container .inner-container .title-container .title-menu .btn-menu.gray:hover, .title-container .inner-container .title-container .title-menu .btn-menu.gray:active, .title-container .inner-container .title-container .title-menu .btn-menu.gray:focus {
+              background: gray !important;
+              color: white !important; }
+          .title-container .inner-container .title-container .title-menu .btn-menu.blue {
+            border-color: #4285f4 !important;
+            color: #4285f4 !important; }
+            .title-container .inner-container .title-container .title-menu .btn-menu.blue:hover, .title-container .inner-container .title-container .title-menu .btn-menu.blue:active, .title-container .inner-container .title-container .title-menu .btn-menu.blue:focus {
+              background: #4285f4 !important;
+              color: white !important; }
+          .title-container .inner-container .title-container .title-menu .btn-menu.green {
+            border-color: #34A853 !important;
+            color: #34A853 !important; }
+            .title-container .inner-container .title-container .title-menu .btn-menu.green:hover, .title-container .inner-container .title-container .title-menu .btn-menu.green:active, .title-container .inner-container .title-container .title-menu .btn-menu.green:focus {
+              background: #34A853 !important;
+              color: white !important; }
+          .title-container .inner-container .title-container .title-menu .btn-menu.yellow {
+            border-color: #FBBC04 !important;
+            color: #FBBC04 !important; }
+            .title-container .inner-container .title-container .title-menu .btn-menu.yellow:hover, .title-container .inner-container .title-container .title-menu .btn-menu.yellow:active, .title-container .inner-container .title-container .title-menu .btn-menu.yellow:focus {
+              background: #FBBC04 !important;
+              color: white !important; }
+          .title-container .inner-container .title-container .title-menu .btn-menu.red {
+            border-color: #E94235 !important;
+            color: #E94235 !important; }
+            .title-container .inner-container .title-container .title-menu .btn-menu.red:hover, .title-container .inner-container .title-container .title-menu .btn-menu.red:active, .title-container .inner-container .title-container .title-menu .btn-menu.red:focus {
+              background: #E94235 !important;
+              color: white !important; }

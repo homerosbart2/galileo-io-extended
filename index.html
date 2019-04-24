@@ -41,23 +41,24 @@
 </head>
 <body>
     <span id="background" class="background">
+            <img src="assets/img/image93.gif" alt="Universidad Galileo">
     </span>
     <span class="title-container">
         <span class="inner-container">
             <span id="title-container" class="title-container no-select">
                 <span class="title">
-                    <!-- <img id="innovation-logo" class="innovation-logo" src="" alt=""> -->
-                    Google I/O Extended
+                    <img id="innovation-logo" class="innovation-logo" src="" alt="">
+                    <!-- Google I/O Extended -->
                 </span>
-                <span class="date">
-                    30 - 31 de mayo
-                </span>
+                <!-- <span class="date">
+                    <b>30</b> y <b>31</b> de mayo
+                </span> -->
                 <span class="title-menu">
-                    <a id="home-access" class="btn-menu">Home</a>
-                    <a id="staff-access" class="btn-menu pink">Staff</a>
-                    <a id="projects-access" class="btn-menu">Projects</a>
-                    <a id="presentations-access" class="btn-menu">Presentations</a>
-                    <a id="workshops-access" class="btn-menu">Workshops</a>
+                    <a id="home-access" class="btn-menu gray">Home</a>
+                    <a id="staff-access" class="btn-menu blue">Staff</a>
+                    <a id="projects-access" class="btn-menu red">Projects</a>
+                    <a id="presentations-access" class="btn-menu yellow">Presentations</a>
+                    <a id="workshops-access" class="btn-menu green">Workshops</a>
                 </span>
             </span>
         </span>
@@ -70,8 +71,14 @@
             
         </span>
     </span>
+    <span id="dynamic-expanded-information" class="dynamic-expanded-information">
+        <span class="section-body">
+            
+        </span>
+    </span>
     <!-- <span id="copyright" class="copyright">© 2019 Laboratorio de Innovacion.</span> -->
     <span id="galileo-logo" class="galileo-logo">
+        <img src="assets/img/logo2.png" alt="Universidad Galileo">
         <img src="assets/img/galileo-logo.png" alt="Universidad Galileo">
     </span>
     <span id="back-container" class="back-container">
@@ -307,6 +314,15 @@
         element.css('z-index', '1');
     }
 
+    function generateExpandedStaff(img_path, name, company, information){
+        var element = $('#dynamic-expanded-information');
+        var html = '';
+        html += '<span class="staff-image">';
+        html += `<img src="${img_path}">`;
+        html += '</span>';
+        element.find('.section-body').html(html);
+    }
+
     function generateStaff(){
         var element = $('#dynamic-information');
         //element.find('.section-title').html('STAFF');
@@ -340,14 +356,23 @@
         element.css('opacity', '1');
         element.css('transform', 'translateY(0)');
         element.css('z-index', '1');
+
+        $('.staff-image').click((event)=>{
+            element = $(event.currentTarget);
+            var image_path = element.find('img').attr('src');
+            var name = element.parent().find('.staff-name').html();
+            var company = element.parent().find('.staff-company').html();
+            var information = element.parent().find('.staff-information').html();
+            generateExpandedStaff(image_path, name, company, information);
+        });
     }
 
     function hideIndex(){
         $('#copyright').css('bottom', '-23px');
-        $('#galileo-logo').css('bottom', '-118px');
+        $('#galileo-logo').css('bottom', '-130px');
         $('#title-container').css('opacity', '0');
         $('#title-container').css('transform', 'translateY(20px)');
-        $('#background').css('filter', 'blur(20px) brightness(0.7)');
+        $('#background').css('opacity', '0');
         $('#back-container').find('.btn-back').css('transform', 'translateX(0)');
         $('body').css('overflow-y', 'auto');
         $('#title-container').css('z-index', '-1');
@@ -365,7 +390,7 @@
         var element = $('#title-container');
         element.css('opacity', '1');
         element.css('transform', 'translateY(0)');
-        $('#background').css('filter', 'blur(9px) brightness(0.7)');
+        $('#background').css('opacity', '1');
         $('#back-container').find('.btn-back').css('transform', 'translateX(-85px)');
         element = $('#dynamic-information');
         element.css('opacity', '0');
@@ -381,9 +406,9 @@
 
     $(window).resize(()=>{
         if($(window).width() > 750){
-            $('#innovation-logo').attr('src','assets/img/logo3.png');
+            $('#innovation-logo').attr('src','assets/img/logo1.png');
         }else{
-            $('#innovation-logo').attr('src','assets/img/logo.png');
+            $('#innovation-logo').attr('src','assets/img/logo1.png');
         }
     });
 
@@ -392,14 +417,14 @@
         $('.background').css('transform', 'scale(1.2)');
 
         console.log();
-        // $('#innovation-logo')[0].onload = ()=>{
-        //     $('#innovation-logo').css('opacity', '1');
-        // };
+        $('#innovation-logo')[0].onload = ()=>{
+            $('.title-container').css('opacity', '1');
+        };
 
         if($(window).width() > 750){
-            $('#innovation-logo').attr('src','assets/img/logo3.png');
+            $('#innovation-logo').attr('src','assets/img/logo1.png');
         }else{
-            $('#innovation-logo').attr('src','assets/img/logo.png');
+            $('#innovation-logo').attr('src','assets/img/logo1.png');
         }
 
         $('.btn-menu').click((event)=>{
