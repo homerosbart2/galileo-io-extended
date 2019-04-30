@@ -1,5 +1,21 @@
 var staff = [
     {
+        name : 'Isabel Palomar',
+        information : 'Co-organizadora de las comunidades de GDG Guadalajara GDG Guadalajara, Tech Women Community, WWCode Ciudad Guzmán y JUG PA.',
+        image : 'IsabelPalomar.jpg',
+        email : '-',
+        gde: '0',
+        company: '-'
+    },
+        {
+        name : 'Adriana Moya',
+        information : 'Python Developer en Globant y parte de las comunidades GDG Bogotá y GCDC Bogotá.',
+        image : 'Adriana Moya.jpg',
+        email : '-',
+        gde: '0',
+        company: 'Globant'
+    },
+    {
         name : 'Diego Velásquez',
         information : 'Google Developer Expert de Flutter.',
         image : 'diegovel.jpg',
