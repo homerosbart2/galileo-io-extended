@@ -8,8 +8,9 @@ var staff = [
     },
         {
         name : 'Adriana Moya',
-        information : 'Python Developer en Globant y parte de las comunidades GDG Bogotá y GCDC Bogotá.',
+        information : 'GDE de Cloud, Python Developer en Globant y parte de las comunidades GDG Bogotá y GCDC Bogotá.',
         image : 'Adriana Moya.jpg',
+        gde: '1',
         email : '-',
         company: 'Globant'
     },
