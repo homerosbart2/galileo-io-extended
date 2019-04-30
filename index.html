@@ -54,10 +54,10 @@
                 </span> -->
                 <span class="title-menu">
                     <a id="home-access" class="btn-menu gray">Home</a>
-                    <a id="staff-access" class="btn-menu blue">Staff</a>
-                    <a id="projects-access" class="btn-menu red">Projects</a>
-                    <a id="presentations-access" class="btn-menu yellow">Presentations</a>
-                    <a id="workshops-access" class="btn-menu green">Workshops</a>
+                    <a id="staff-access" class="btn-menu blue">People</a>
+                    <a id="projects-access" class="btn-menu red">Codelabs</a>
+                    <a id="presentations-access" class="btn-menu yellow">Calendar</a>
+                    <a id="workshops-access" class="btn-menu green solid">Register</a>
                 </span>
             </span>
         </span>
@@ -74,6 +74,11 @@
         <span class="section-body">
             
         </span>
+        <!-- <span class="exit">
+            <a id="exit-btn" class="exit-btn">
+                <i class="fas fa-times"></i> Exit
+            </a>
+        </span> -->
     </span>
     <!-- <span id="copyright" class="copyright">© 2019 Laboratorio de Innovacion.</span> -->
     <span id="galileo-logo" class="galileo-logo">
@@ -90,6 +95,8 @@
 
 <script>
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Agu', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var inIndex = true;
+    var inExpanded = false;
 
     function generateHome(){
         var element = $('#dynamic-information');
@@ -313,13 +320,102 @@
         element.css('z-index', '1');
     }
 
-    function generateExpandedStaff(img_path, name, company, information){
+    function generateExpandedStaff(img_path, name, gde){
+        inExpanded = true;
+
+        var findedStaff;
+        staff.forEach((staffMember)=>{
+            if(staffMember.name == name){
+                findedStaff = staffMember;
+            }
+        });
+
         var element = $('#dynamic-expanded-information');
         var html = '';
+
+        html += '<span class="staff-expanded-card">';
         html += '<span class="staff-image">';
-        html += `<img src="${img_path}">`;
+        html += `<img class="img" src="${img_path}">`;
+
+        if(gde[0] != undefined) html += '<span class="gde-banner"><span class="img-container"><img src="assets/img/gde.png"></span></span>';
+
         html += '</span>';
+
+        html += `<span class="staff-name">${name}</span>`;
+        html += `<span class="staff-company">${findedStaff.company}</span>`;
+        html += `<span class="staff-information">${findedStaff.information}</span>`;
+
+        html += '<span class="events-container">';
+        html += '<span class="event-card">';
+
+        html += '<span class="event-time">';
+        html += '<span class="time">';
+        html += '10:00';
+        html += '</span>';
+        html += '<span class="m">';
+        html += 'AM';
+        html += '</span>';
+        html += '</span>';
+
+        html += '<span class="event-information">';
+        html += '<span class class="date">';
+        html += '</span>';
+        html += '<span class="event-title">';
+        html += 'Arduino for Beginners';
+        html += '</span>';
+        html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
+        html += 'Salón 315';
+        html += '</span>';
+        html += '</span>';
+
+        html += '</span>';
+
+        html += '<span class="event-card">';
+
+        html += '<span class="event-time">';
+        html += '<span class="time">';
+        html += '';
+        html += '</span>';
+        html += '<span class="m">';
+        html += '';
+        html += '</span>';
+        html += '</span>';
+
+        html += '<span class="event-information">';
+        html += '<span class class="date">';
+        html += '</span>';
+        html += '<span class="event-title">';
+        html += 'Arduino for Beginners';
+        html += '</span>';
+        html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
+        html += 'Salón 315';
+        html += '</span>';
+        html += '</span>';
+
+        html += '</span>';
+        html += '</span>';
+
+        html += '</span>';
+
         element.find('.section-body').html(html);
+
+        setTimeout(()=>{
+            $('#dynamic-information').css('display', 'none');
+        }, 300);
+        $('#dynamic-expanded-information').css('width', '100vw');
+        $('#dynamic-expanded-information').css('height', '100vh');
+        $('#dynamic-expanded-information').css('opacity', '1');
+    }
+
+    function hideExpanded(){
+        inExpanded = false;
+        $('#dynamic-information').css('display', 'flex');
+        setTimeout(()=>{
+            $('#dynamic-expanded-information').find('.section-body').html('');
+            $('#dynamic-expanded-information').css('height', 'auto');
+        }, 300);
+        $('#dynamic-expanded-information').css('opacity', '0');
+        
     }
 
     function generateStaff(){
@@ -331,16 +427,19 @@
             html += `<span class="staff-card ${element.job}">`;
             //html += `<img class="staff-bg" src="assets/img/${element.image}">`;
             html += '<span class="staff-image">';
-            html += `<img src="assets/img/${element.image}">`;
+            html += `<img class="img" src="assets/img/${element.image}">`;
+            if(element.gde != null){
+                html += '<span class="gde-banner"><span class="img-container"><img src="assets/img/gde.png"></span></span>';
+            }
             html += '<span class="staff-job">';
-            html += 'Ver más';
+            html += 'See more';
             html += '</span>';
             html += '</span>';
             html += '<span class="staff-name">';
             html += element.name;
             html += '</span>';
             html += '<span class="staff-company">';
-            html += 'Universidad Galileo';
+            html += element.company;
             html += '</span>';
             html += '<span class="staff-information">';
             html += '<p>';
@@ -358,15 +457,15 @@
 
         $('.staff-image').click((event)=>{
             element = $(event.currentTarget);
-            var image_path = element.find('img').attr('src');
+            var image_path = element.find('.img').attr('src');
             var name = element.parent().find('.staff-name').html();
-            var company = element.parent().find('.staff-company').html();
-            var information = element.parent().find('.staff-information').html();
-            generateExpandedStaff(image_path, name, company, information);
+            var gde = element.find('.gde-banner');
+            generateExpandedStaff(image_path, name, gde);
         });
     }
 
     function hideIndex(){
+        inIndex = false;
         $('#copyright').css('bottom', '-23px');
         $('#galileo-logo').css('bottom', '-130px');
         $('#title-container').css('opacity', '0');
@@ -401,20 +500,23 @@
         setTimeout(()=>{
             element.find('.section-body').html('');
         },400);
+        inIndex = true;
     }
 
     $(window).resize(()=>{
-        if($(window).width() > 750){
-            $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
-            $('.background').html('<img src="" alt="">');
-            $('.background').find('img')[0].onload = () => {
-                $('.background').css('opacity', '1');
-                $('.background').css('transform', 'scale(1)');
+        if(inIndex){
+            if($(window).width() > 750){
+                $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
+                $('.background').html('<img src="" alt="">');
+                $('.background').find('img')[0].onload = () => {
+                    $('.background').css('opacity', '1');
+                    $('.background').css('transform', 'scale(1)');
+                }
+                $('.background').find('img').attr('src','assets/img/image93.gif');
+            }else{
+                $('#innovation-logo').attr('src','assets/img/logo3.png');
+                $('.background').html('');
             }
-            $('.background').find('img').attr('src','assets/img/image93.gif');
-        }else{
-            $('#innovation-logo').attr('src','assets/img/logo3.png');
-            $('.background').html('');
         }
     });
 
@@ -464,7 +566,8 @@
         });
 
         $('#back').click(()=>{
-            showIndex();
+            if(inExpanded) hideExpanded();
+            else showIndex();
         });
     });
 </script>

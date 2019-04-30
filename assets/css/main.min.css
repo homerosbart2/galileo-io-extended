@@ -733,13 +733,13 @@ nav {
         border: 6px solid #4285f4; }
         .staff-container .staff-card .staff-image:hover + .staff-name + .staff-company + .staff-information, .staff-container .staff-card .staff-image:active + .staff-name + .staff-company + .staff-information, .staff-container .staff-card .staff-image:focus + .staff-name + .staff-company + .staff-information {
           border-bottom: 6px solid #4285f4; }
-        .staff-container .staff-card .staff-image:hover img, .staff-container .staff-card .staff-image:active img, .staff-container .staff-card .staff-image:focus img {
+        .staff-container .staff-card .staff-image:hover .img, .staff-container .staff-card .staff-image:active .img, .staff-container .staff-card .staff-image:focus .img {
           filter: blur(10px) brightness(0.5) grayscale(100%);
           transform: scale(1.2); }
         .staff-container .staff-card .staff-image:hover .staff-job, .staff-container .staff-card .staff-image:active .staff-job, .staff-container .staff-card .staff-image:focus .staff-job {
           opacity: 1;
           color: #4285f4; }
-      .staff-container .staff-card .staff-image img {
+      .staff-container .staff-card .staff-image .img {
         transition: 0.3s ease;
         width: 100%;
         height: auto;
@@ -748,7 +748,7 @@ nav {
         left: 50%;
         margin-left: -75px;
         margin-top: -75px;
-        filter: blur(0) brightness(1) grayscale(100%); }
+        filter: blur(0) brightness(1); }
       .staff-container .staff-card .staff-image .staff-job {
         transition: 0.3s ease;
         position: absolute;
@@ -761,6 +761,23 @@ nav {
         align-items: center;
         opacity: 0;
         text-shadow: 0 0 15px rgba(0, 0, 0, 0.34); }
+      .staff-container .staff-card .staff-image .gde-banner {
+        background: #eeeeee;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin-top: -55px; }
+        .staff-container .staff-card .staff-image .gde-banner .img-container {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          padding-top: 3px; }
+          .staff-container .staff-card .staff-image .gde-banner .img-container img {
+            width: 101px;
+            height: 45px;
+            width: 100px; }
     .staff-container .staff-card .staff-name {
       margin-top: 5px;
       color: black;
@@ -784,6 +801,112 @@ nav {
         text-align: justify;
         color: black;
         padding: 2px 15px 8px 15px; }
+
+.dynamic-expanded-information {
+  opacity: 0;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  background: white;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  max-width: 900px; }
+  .dynamic-expanded-information .exit {
+    position: absolute;
+    right: 0; }
+    .dynamic-expanded-information .exit .exit-btn {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.3s ease;
+      color: gray; }
+      .dynamic-expanded-information .exit .exit-btn:hover, .dynamic-expanded-information .exit .exit-btn:active, .dynamic-expanded-information .exit .exit-btn:focus {
+        color: #4285f4; }
+      .dynamic-expanded-information .exit .exit-btn i {
+        margin-right: 6px;
+        font-size: 18px; }
+  .dynamic-expanded-information .section-body .staff-expanded-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px; }
+    .dynamic-expanded-information .section-body .staff-expanded-card .staff-image {
+      position: relative;
+      border-radius: 100%;
+      overflow: hidden;
+      display: flex;
+      width: 200px;
+      padding-top: 200px;
+      transition: 0.3s ease;
+      border: 6px solid #4285f4; }
+      .dynamic-expanded-information .section-body .staff-expanded-card .staff-image .img {
+        transition: 0.3s ease;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -100px;
+        margin-top: -100px; }
+      .dynamic-expanded-information .section-body .staff-expanded-card .staff-image .gde-banner {
+        background: #eeeeee;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin-top: -75px; }
+        .dynamic-expanded-information .section-body .staff-expanded-card .staff-image .gde-banner .img-container {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          padding-top: 3px; }
+          .dynamic-expanded-information .section-body .staff-expanded-card .staff-image .gde-banner .img-container img {
+            width: 135px !important;
+            height: 60px; }
+    .dynamic-expanded-information .section-body .staff-expanded-card .staff-name {
+      margin-top: 5px;
+      color: #4285f4;
+      display: flex;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      z-index: 1; }
+    .dynamic-expanded-information .section-body .staff-expanded-card .staff-company {
+      color: gray;
+      z-index: 1; }
+    .dynamic-expanded-information .section-body .staff-expanded-card .staff-information {
+      padding: 5px 10px;
+      background: #AECBFA; }
+
+.events-container {
+  margin-top: 6px;
+  display: flex;
+  width: 100%;
+  flex-direction: column; }
+  .events-container .event-card {
+    display: flex;
+    flex-direction: row;
+    padding: 6px; }
+    .events-container .event-card .event-time {
+      min-width: 38px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: gray;
+      margin: 0 16px; }
+      .events-container .event-card .event-time .time {
+        font-size: 15px; }
+      .events-container .event-card .event-time .m {
+        font-size: 13px; }
+    .events-container .event-card .event-information .event-title {
+      font-weight: bold;
+      display: flex;
+      width: 100%; }
+    .events-container .event-card .event-information .event-ubication i {
+      margin-right: 6px; }
 
 .workshops-container {
   margin-top: 25px;
@@ -1139,7 +1262,7 @@ body {
   position: fixed;
   bottom: 40px;
   display: flex;
-  z-index: 1;
+  z-index: 3;
   left: 0; }
   .back-container .btn-back {
     margin-left: 40px;
@@ -1336,9 +1459,14 @@ body {
           .title-container .inner-container .title-container .title-menu .btn-menu.green {
             border-color: #34A853 !important;
             color: #34A853 !important; }
+            .title-container .inner-container .title-container .title-menu .btn-menu.green.solid {
+              background: #34A853 !important;
+              color: white !important; }
             .title-container .inner-container .title-container .title-menu .btn-menu.green:hover, .title-container .inner-container .title-container .title-menu .btn-menu.green:active, .title-container .inner-container .title-container .title-menu .btn-menu.green:focus {
               background: #34A853 !important;
               color: white !important; }
+              .title-container .inner-container .title-container .title-menu .btn-menu.green:hover.solid, .title-container .inner-container .title-container .title-menu .btn-menu.green:active.solid, .title-container .inner-container .title-container .title-menu .btn-menu.green:focus.solid {
+                box-shadow: 0 2px 4px rgba(52, 168, 83, 0.4); }
           .title-container .inner-container .title-container .title-menu .btn-menu.yellow {
             border-color: #FBBC04 !important;
             color: #FBBC04 !important; }
