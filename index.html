@@ -528,11 +528,11 @@
             $('.title-container').css('opacity', '1');
         };
 
-        if($(window).width() > 750 && inIndex){
+        if($(window).width()){
             $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
             $('.background').html('<img src="" alt="">');
             $('.background').find('img')[0].onload = () => {
-                $('.background').css('opacity', '1');
+                if(inIndex) $('.background').css('opacity', '1');
                 $('.background').css('transform', 'scale(1)');
             }
             $('.background').find('img').attr('src','assets/img/image93.gif');
