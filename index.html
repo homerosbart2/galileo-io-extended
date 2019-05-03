@@ -39,7 +39,7 @@
 
     <title>Google I/O Extended</title>
 </head>
-<body>
+<body font-family="Product">
     <span id="background" class="background">
     </span>
     <span class="title-container">
@@ -53,11 +53,11 @@
                     <b>30</b> y <b>31</b> de mayo
                 </span> -->
                 <span class="title-menu">
-                    <a id="home-access" class="btn-menu gray">Home</a>
+                    <a id="home-access" class="btn-menu gray disabled">Home</a>
                     <a id="staff-access" class="btn-menu blue">People</a>
-                    <a id="projects-access" class="btn-menu red">Codelabs</a>
-                    <a id="presentations-access" class="btn-menu yellow">Calendar</a>
-                    <a id="workshops-access" class="btn-menu green solid">Register</a>
+                    <a id="projects-access" class="btn-menu red disabled">Codelabs</a>
+                    <a id="presentations-access" class="btn-menu yellow disabled">Calendar</a>
+                    <a id="workshops-access" class="btn-menu green solid disabled">Register</a>
                 </span>
             </span>
         </span>
@@ -528,7 +528,7 @@
             $('.title-container').css('opacity', '1');
         };
 
-        if($(window).width() > 750){
+        if($(window).width() > 750 && inIndex){
             $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
             $('.background').html('<img src="" alt="">');
             $('.background').find('img')[0].onload = () => {
@@ -542,26 +542,27 @@
         }
 
         $('.btn-menu').click((event)=>{
-            //console.log('hola');
-            hideIndex();
+            if(!$(event.currentTarget).hasClass('disabled')){
+                hideIndex();
 
-            var element = event.target;
-            switch(element.id){
-                case 'home-access':{
-                    generateHome();
-                }break;
-                case 'staff-access':{
-                    generateStaff();
-                }break;
-                case 'projects-access':{
-                    generateProjects();
-                }break;
-                case 'presentations-access':{
-                    console.log('hola');
-                }break;
-                case 'workshops-access':{
-                    generateWorkshops();
-                }break;
+                var element = event.target;
+                switch(element.id){
+                    case 'home-access':{
+                        //generateHome();
+                    }break;
+                    case 'staff-access':{
+                        generateStaff();
+                    }break;
+                    case 'projects-access':{
+                        //generateProjects();
+                    }break;
+                    case 'presentations-access':{
+                        //console.log('hola');
+                    }break;
+                    case 'workshops-access':{
+                        //generateWorkshops();
+                    }break;
+                }
             }
         });
 

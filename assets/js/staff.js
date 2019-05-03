@@ -35,7 +35,7 @@ var staff = [
         image : 'diegocoy.png',
         email : '-',
         gde : '1',
-        company: 'Wizeline'
+        company: '-'
     },
     {
         name : 'Adrián Catalán',
