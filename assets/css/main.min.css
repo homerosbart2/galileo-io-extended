@@ -470,7 +470,9 @@ img::-moz-selection {
 
 @font-face {
   font-family: 'Product';
-  src: url("../../../build/assets/typography/Product Sans Regular.ttf") format("truetype"); }
+  src: url("../../../build/assets/typography/Product Sans Regular.ttf") format("truetype"), url("product_sans_regular-webfont.woff2") format("woff2"), url("product_sans_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 
 html {
   font-family: 'Product', sans-serif; }
