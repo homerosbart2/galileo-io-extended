@@ -1,5 +1,13 @@
 var staff = [
     {
+        name : 'Kenza Zouaoui',
+        information : 'Google Developer Expert en Estrategia de Producto, Directora de Operaciones de Makesense en México y Climate Reality Leader',
+        image : 'KenzaZouaoui.jpeg',
+        gde: '1',
+        email : '-',
+        company: 'Makesense'
+    },
+    {
         name : 'Isabel Palomar',
         information : 'Co-organizadora de las comunidades de GDG Guadalajara GDG Guadalajara, Tech Women Community, WWCode Ciudad Guzmán y JUG PA.',
         image : 'IsabelPalomar.jpg',
