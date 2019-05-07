@@ -53,7 +53,7 @@
                     <b>30</b> y <b>31</b> de mayo
                 </span> -->
                 <span class="title-menu">
-                    <a id="home-access" class="btn-menu gray disabled">Home</a>
+                    <a id="home-access" class="btn-menu gray">Home</a>
                     <a id="staff-access" class="btn-menu blue">People</a>
                     <a id="projects-access" class="btn-menu red disabled">Codelabs</a>
                     <a id="presentations-access" class="btn-menu yellow disabled">Calendar</a>
@@ -100,29 +100,22 @@
 
     function generateHome(){
         var element = $('#dynamic-information');
-        element.find('.section-title').html('HOME');
 
         var html = '';
             html += '<span class="subtitle">';
-            html += 'About the Innovation Lab';
+            html += 'Información';
             html += '</span>';
             html += '<p>';
-            html += '"Nothing is a mistake. There\'s no win and no fail, there\'s only make." - Corita Kent';
-            html += '</p>';
-            html += '<p>';
-            html += 'The Innovation Lab fosters a unique culture to cultivate curiosity and use creativity as a tool for the development of innovative technology projects. Through an environment characterized by teamwork, ensuring project success through experimentation of new ideas and the explicit permissibility of making mistakes and fail in order to achieve allow members to express themselves, learn, share and grow as a community.';
-            html += '</p>';
-            html += '<p>';
-            html += 'The Lab is committed to see beyond the obvious, we are aware that more important than finding a single correct answer we need to consider all questions as we can imagine and explore different ideas. We like to use design thinking, build prototypes and make use of innovative technologies such as 3D printing, drones, computer vision and augmented reality (Leap Motion, Kinect, Google Glass, Oculus Rift), the Internet of Things (Arduino, Launchpad, BeagleBone Black and RaspberryPi) and bring these technologies together to our experiments. Build circuits, write code, develop software and do the necessary to make things work.';
-            html += '</p>';
-            html += '<p>';
-            html += 'In the pursuit of innovation is also required a market and raise awareness in people that would be users of this technology that eventually will become products that people can receive and improve their lifestyle. Therefore, the Lab also has a commitment to promoting entrepreneurship and creating startups. The startups that the Lab supports work in the area of ​​technology because we believe that is the way to have a tangible and short-term change at all levels.';
+            html += 'El objetivo del evento es servir como una introducción a distintas tecnologías a personas de distintos perfiles. Se va a separar el evento en dos partes, una parte en la mañana, para estudiantes de colegios (para motivarlos a seguir carreras tecnológicas), y en la tarde para profesionales, con los cuales el approach se pretende que sea más técnico.';
             html += '</p>';
             html += '<span class="subtitle">';
-            html += 'Why Innovation?';
+            html += 'Lugar y Fecha';
             html += '</span>';
-            html += '<p>In 2016, Guatemala is ranked 97th globally in terms of innovation, our score is 27.30/100. Both the global leader (Switzerland) and the Latin American leaders (Chile & Costa Rica) have won their seats by investing on research, technological development and education. For us, there is a great opportunity for improvement in the area of ​​innovation.</p>';
-            html += '<p>Innovation requires novelty, can be a small change (sustained innovation) or a radical ( disruptive innovation) but either way, it will be something new. From my perspective this is achieved through the creativity that is nothing else that imagination put into practice. So to succeed in creating, we make use of innovation in assessing how to provide value and solve the right problems in a better way. We constantly look how to be agents of change and to connect ideas when doing technological development, that’s when we use innovation as our key tool in order that things can be implemented. That is why we decided to implement this effort as a laboratory rather than a department. For since the name suggests action implicit, that practical activities will be conducted and projects will be implemented.</p>';
+            html += '<p>';
+            html += 'Se llevará a cabo en Universidad Galileo (Sede Central).<br>';
+            html += '7a. Avenida, Calle Dr. Eduardo Suger Cofiño, zona 10.<br>';
+            html += 'Los días 30 y 31 de mayo.';
+            html += '</p>';
         
         element.find('.section-body').html(html);
         
@@ -528,7 +521,7 @@
             $('.title-container').css('opacity', '1');
         };
 
-        if($(window).width()){
+        if($(window).width() > 750){
             $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
             $('.background').html('<img src="" alt="">');
             $('.background').find('img')[0].onload = () => {
@@ -548,7 +541,7 @@
                 var element = event.target;
                 switch(element.id){
                     case 'home-access':{
-                        //generateHome();
+                        generateHome();
                     }break;
                     case 'staff-access':{
                         generateStaff();

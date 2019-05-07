@@ -1282,7 +1282,7 @@ body {
 .dynamic-information {
   padding: 15px 15px 70px 15px;
   position: relative;
-  color: white;
+  color: black;
   display: flex;
   z-index: 1;
   flex-direction: column;
@@ -1314,6 +1314,7 @@ body {
     flex-direction: column;
     width: 100%; }
     .dynamic-information .section-body .subtitle {
+      padding: 0 15px;
       font-size: 24px;
       display: flex;
       margin-top: 18px; }
@@ -1326,7 +1327,7 @@ body {
     .dynamic-information .section-body p {
       padding: 15px 15px;
       text-align: justify;
-      color: white;
+      color: black;
       margin: 5px 0; }
       @media only screen and (max-width: 650px) {
         .dynamic-information .section-body p {
@@ -1389,9 +1390,6 @@ body {
           @media only screen and (max-width: 380px) {
             .title-container .inner-container .title-container .title .innovation-logo {
               width: 200px; } }
-        @media only screen and (orientation: portrait) {
-          .title-container .inner-container .title-container .title {
-            transform: translateY(-10px); } }
       .title-container .inner-container .title-container .date {
         color: black;
         margin-bottom: 20px;
