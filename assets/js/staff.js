@@ -1,5 +1,20 @@
 var staff = [
     {
+        name : 'Katherine Chauca',
+        information : 'G Suite Certified Deployment Specialist, Product Owner y organizadora de las comunidades GDG Lima, Google Cloud Developer Community Lima y Agile Perú.',
+        image : 'KatherineChauca.jpg',
+        email : '-',
+        company: '-'
+    },
+    {
+        name : 'Pablo Villanueva',
+        information : 'Google Developer Expert para Google Cloud Platform, co-founder y CTO de Metix y colaborador en el GDG Cloud MX',
+        image : 'Pablovillanuevafar.jpg',
+        gde: '1',
+        email : '-',
+        company: 'Metix'
+    },
+    {
         name : 'Kenza Zouaoui',
         information : 'Google Developer Expert en Estrategia de Producto, Directora de Operaciones de Makesense en México y Climate Reality Leader',
         image : 'KenzaZouaoui.jpeg',
