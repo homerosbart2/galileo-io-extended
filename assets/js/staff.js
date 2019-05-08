@@ -1,4 +1,11 @@
 var staff = [
+     {
+        name : 'Juan Ñahui',
+        information : 'Ingeniero Mecatrónico y padre de Babas',
+        image : 'ñahui.jpeg',
+        email : '@juanybabas',
+        company: '-'
+    },
     {
         name : 'Katherine Chauca',
         information : 'G Suite Certified Deployment Specialist, Product Owner y organizadora de las comunidades GDG Lima, Google Cloud Developer Community Lima y Agile Perú.',
