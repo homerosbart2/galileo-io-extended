@@ -1,7 +1,7 @@
 var staff = [
      {
         name : 'Juan Ñahui',
-        information : 'Ingeniero Mecatrónico y padre de Babas',
+        information : 'Soy un apasionado por la tecnología y con la programación, me gusta enseñar y actualmente me especializo en Inteligencia Artificial, soy parte de Hack Space Perú y también estudié Ingeniería Mecatrónica, suelo crear robots por diversión y creé a Babas un robot con un software que espero en un futuro pueda crear un aporte, en el desarrollo de personas con Asperger.',
         image : 'ñahui.jpeg',
         email : '@juanybabas',
         company: '-'
