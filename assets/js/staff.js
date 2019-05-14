@@ -4,7 +4,7 @@ var staff = [
         information : 'Android / Chatbot / Assistant Developer, GDE, Software Engineer in Avantica & Cyclist.',
         image : 'CarlosRenzo.png',
         email : '-',
-        company: '-'
+        company: 'Avantica'
     },
      {
         name : 'Juan Ñahui',
