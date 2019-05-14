@@ -1,7 +1,7 @@
 var staff = [
       {
         name : 'Carlo Renzo Huamán Torres',
-        information : 'Android / Chatbot / Assistant Developer, GDE, Software Engineer in Avantica & Cyclist',
+        information : 'Android / Chatbot / Assistant Developer, GDE, Software Engineer in Avantica & Cyclist.',
         image : 'CarlosRenzo.png',
         email : '-',
         company: '-'
@@ -22,7 +22,7 @@ var staff = [
     },
     {
         name : 'Pablo Villanueva',
-        information : 'Google Developer Expert para Google Cloud Platform, co-founder y CTO de Metix y colaborador en el GDG Cloud MX',
+        information : 'Google Developer Expert para Google Cloud Platform, co-founder y CTO de Metix y colaborador en el GDG Cloud MX.',
         image : 'Pablovillanuevafar.jpg',
         gde: '1',
         email : '-',
@@ -30,7 +30,7 @@ var staff = [
     },
     {
         name : 'Kenza Zouaoui',
-        information : 'Google Developer Expert en Estrategia de Producto, Directora de Operaciones de Makesense en México y Climate Reality Leader',
+        information : 'Google Developer Expert en Estrategia de Producto, Directora de Operaciones de Makesense en México y Climate Reality Leader.',
         image : 'KenzaZouaoui.jpeg',
         gde: '1',
         email : '-',
