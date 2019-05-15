@@ -1391,6 +1391,10 @@ body {
       .dynamic-information .section-body .map-container iframe {
         width: 100%;
         margin: 0 30px; }
+        @media only screen and (max-width: 650px) {
+          .dynamic-information .section-body .map-container iframe {
+            height: 100%;
+            margin: 0; } }
     .dynamic-information .section-body .register-container input {
       color: black !important;
       text-align: center !important; }
