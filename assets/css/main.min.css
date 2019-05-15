@@ -1433,7 +1433,7 @@ body {
               width: 200px; } }
           @media only screen and (max-width: 380px) {
             .title-container .inner-container .title-container .title .innovation-logo {
-              width: 200px; } }
+              width: 165px; } }
       .title-container .inner-container .title-container .date {
         color: black;
         margin-bottom: 20px;
@@ -1466,7 +1466,7 @@ body {
             width: 230px; } }
         @media only screen and (max-width: 380px) {
           .title-container .inner-container .title-container .title-menu {
-            width: 200px; } }
+            width: 165px; } }
         .title-container .inner-container .title-container .title-menu .btn-menu {
           padding: 6px 14px;
           font-size: 15px;
