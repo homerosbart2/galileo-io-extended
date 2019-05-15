@@ -53,11 +53,12 @@
                     <b>30</b> y <b>31</b> de mayo
                 </span> -->
                 <span class="title-menu">
-                    <a id="home-access" class="btn-menu gray">Home</a>
-                    <a id="staff-access" class="btn-menu blue">People</a>
-                    <a id="projects-access" class="btn-menu red disabled">Codelabs</a>
-                    <a id="presentations-access" class="btn-menu yellow disabled">Calendar</a>
-                    <a id="workshops-access" class="btn-menu green solid disabled">Register</a>
+                    <a id="home-access" class="btn-menu gray">Principal</a>
+                    <a id="staff-access" class="btn-menu blue">Conferencistas</a>
+                    <!-- <a id="projects-access" class="btn-menu red disabled">Codelabs</a> -->
+                    <a id="agenda-access" class="btn-menu red">Agenda</a>
+                    <a id="sponsors-access" class="btn-menu yellow disabled">Patrocinadores</a>
+                    <a id="register-access" class="btn-menu green solid">Registrate</a>
                 </span>
             </span>
         </span>
@@ -82,8 +83,7 @@
     </span>
     <!-- <span id="copyright" class="copyright">© 2019 Laboratorio de Innovacion.</span> -->
     <span id="galileo-logo" class="galileo-logo">
-        <img src="assets/img/logo2stroke.PNG" alt="Universidad Galileo">
-        <img src="assets/img/galileo-logostroke.PNG" alt="Universidad Galileo">
+        
     </span>
     <span id="back-container" class="back-container">
         <a id="back" class="btn-back">
@@ -96,7 +96,12 @@
 <script>
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Agu', 'Sep', 'Oct', 'Nov', 'Dec'];
     var inIndex = true;
+    var isCarouselOn = false;
     var inExpanded = false;
+    var orderStaff = new Array();
+
+    var logos = ['<img src="assets/img/gdg.png" alt="GDG">', '<img src="assets/img/maya.png" alt="GDG Guatemala">', '<img src="assets/img/logo2stroke.PNG" alt="Google Cloud Next">', '<img src="assets/img/galileo-logostroke.PNG" alt="Universidad Galileo">', '<img src="assets/img/wtm.png" alt="Women Tech Maker">'];
+
 
     function generateHome(){
         var element = $('#dynamic-information');
@@ -124,190 +129,91 @@
         element.css('z-index', '1');
     }
 
-    function generateProjects(){
-        var correlative = 0;
+    function generateAgenda(){
         var element = $('#dynamic-information');
-        element.find('.section-title').html('PROJECTS');
-        var html = '';
-        html += '<span class="projects-container">';
-        projects.forEach(element => {
-            html += `<span id="${correlative}" class="project-card">`;
-            html += `<img src="assets/img/${element.thumbnail}">`;
-            html += '<span class="project-info-container">';
-            html += '<span class="project-name">';
-            html += element.name;
+
+        var html = "";
+            html += '<span class="subtitle">';
+            html += 'Jueves 30 y Viernes 31 de 09:00 - 13:00';
             html += '</span>';
-            html += '<span class="project-date">';
-            html += months[element.month - 1] + ' ' + element.year
-            html += '</span>';
-            html += '<p class="project-introduction">';
-            html += element.introduction;
+            html += '<p>';
+            html += 'Horario específico para estudiantes de colegio.';
             html += '</p>';
+            html += '<span class="subtitle">';
+            html += 'Jueves 30 y Viernes 31 de 18:00 - 21:00';
             html += '</span>';
-            html += '<a class="btn-back">';
-            html += '<i class="fas fa-arrow-up"></i>';
-            html += '</a>';
-            html += '</span>';
-            correlative++;
-        });
-        html += '</span>';
-        html += `<span id="project-information" class="project-information">`;
-        html += '</span>';
+            html += '<p>';
+            html += 'Horario específico para cualquier persona.';
+            html += '</p>';
+
         element.find('.section-body').html(html);
-
-
-        $('.project-card').click((event)=>{
-            element = $(event.currentTarget);
-            if(element.hasClass('expanded')){
-                element.removeClass('expanded');
-                element.parent().removeClass('expanded');
-                $('#background').removeClass('unfocused');
-                element.find('.btn-back').html('<i class="fas fa-arrow-up"></i>');
-                $('#project-information').removeClass('expanded');
-            }else{
-                element.addClass('expanded');
-                element.parent().addClass('expanded');
-                $('#background').addClass('unfocused');
-                element.find('.btn-back').html('<i class="fas fa-plus"></i>');
-
-                html = '';
-                var project = projects[element.attr('id')];
-
-                html += '<span class="project-summary">';
-                html += project.summary;
-                html += '</span>';
-                html += '<p class="project-status">';
-                html += '<i class="fas fa-circle"></i>';
-                html += project.status;
-                html += '</p>';
-                if(typeof(project.video) !== 'undefined'){
-                    html += '<span id="youtube-video" class="youtube-video">';
-                    html += project.video;
-                    html += '</span>';
-                }
-                (project.description).forEach((desc)=>{
-                    html += '<p>';
-                    html += desc;
-                    html += '</p>';
-                });
-                
-                $('#project-information').html(html);
-                if(typeof(project.video) !== 'undefined'){
-                    var video = $('#youtube-video').find('iframe');
-                    video.on('load',()=>{
-                        video.addClass('expanded');
-                    });
-                }
-                $('#project-information').addClass('expanded');
-            }
-        });
-
         element.css('opacity', '1');
         element.css('transform', 'translateY(0)');
         element.css('z-index', '1');
     }
 
-    function generateWorkshops(){
-        var correlative = 0;
+    function generateRegister(){
         var element = $('#dynamic-information');
-        element.find('.section-title').html('WORKSHOPS');
-        var html = '';
-        html += '<span class="workshops-container">';
-        workshops.forEach(element => {
-            html += `<span id="${correlative}" class="workshop-card">`;
-            html += `<img src="assets/img/${element.image}">`;
-            html += '<span class="workshop-info-container">';
-            html += '<span class="workshop-name">';
-            html += element.name;
-            html += '</span>';
-            html += '<span class="workshop-introduction">';
-            html += element.introduction;
-            html += '</span>';
-            html += '</span>';
-            html += '<a class="btn-back">';
-            html += '<i class="fas fa-arrow-up"></i>';
-            html += '</a>';
-            html += '<span class="workshop-duration"><i class="far fa-clock"></i>';
-            html += element.duration;
-            html += '</span>';
-            html += '</span>';
-            correlative++;
-        });
-        html += `<span id="workshop-information" class="workshop-information">`;
-        html += '<p>';
-        html += '</p>';
-        html += '</span>';
-        html += '</span>';
+
+        var html = "";
+        html += '<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">';
+        html += '<style type="text/css">';
+        html += '#mc_embed_signup{background:#fff; clear:left; font:14px; }';
+        html += '</style>';
+        html += '<div id="mc_embed_signup">';
+        html += '<form action="https://galileo.us18.list-manage.com/subscribe/post?u=2ce9b0b87f346aca80c5c4aff&amp;id=b5b5c7069b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>';
+        html += '<div id="mc_embed_signup_scroll" class="register-container">';
+        html += '<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>';
+        html += '<div class="mc-field-group">';
+        html += '<label for="mce-FNAME">Nombres  <span class="asterisk">*</span>';
+        html += '</label>';
+        html += '<input type="text" value="" name="FNAME" class="required" id="mce-FNAME">';
+        html += '</div>';
+        html += '<div class="mc-field-group">';
+        html += '<label for="mce-LNAME">Apellidos  <span class="asterisk">*</span>';
+        html += '</label>';
+        html += '<input type="text" value="" name="LNAME" class="required" id="mce-LNAME">';
+        html += '</div>';
+        html += '<div class="mc-field-group">';
+        html += '<label for="mce-EMAIL">Correo electrónico  <span class="asterisk">*</span>';
+        html += '</label>';
+        html += '<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">';
+        html += '</div>';
+        html += '<div class="mc-field-group size1of2">';
+        html += '<label for="mce-PHONE">Teléfono  <span class="asterisk">*</span>';
+        html += '</label>';
+        html += '<input type="text" name="PHONE" class="required" value="" id="mce-PHONE">';
+        html += '</div>';
+        html += '<div class="mc-field-group input-group">';
+        html += '<strong>¿Qué tema te interesa más?  <span class="asterisk">*</span>';
+        html += '</strong>';
+        html += '<ul><li><input type="radio" value="Machine Learning" name="TOPIC" id="mce-TOPIC-0"><label for="mce-TOPIC-0">Machine Learning</label></li>';
+        html += '<li><input type="radio" value="Cloud" name="TOPIC" id="mce-TOPIC-1"><label for="mce-TOPIC-1">Cloud</label></li>';
+        html += '<li><input type="radio" value="Mobile" name="TOPIC" id="mce-TOPIC-2"><label for="mce-TOPIC-2">Mobile</label></li>';
+        html += '<li><input type="radio" value="Product Design" name="TOPIC" id="mce-TOPIC-3"><label for="mce-TOPIC-3">Product Design</label></li>';
+        html += '<li><input type="radio" value="UI/UX" name="TOPIC" id="mce-TOPIC-4"><label for="mce-TOPIC-4">UI/UX</label></li>';
+        html += '<li><input type="radio" value="Web" name="TOPIC" id="mce-TOPIC-5"><label for="mce-TOPIC-5">Web</label></li>';
+        html += '</ul>';
+        html += '</div>';
+        html += '<div class="mc-field-group input-group">';
+        html += '<strong>¿En qué horario participarás? </strong>';
+        html += '<ul><li><input type="checkbox" value="1" name="group[4601][1]" id="mce-group[4601]-4601-0"><label for="mce-group[4601]-4601-0">Jueves 30 de mayo de 9:00 a 13:00 horas</label></li>';
+        html += '<li><input type="checkbox" value="2" name="group[4601][2]" id="mce-group[4601]-4601-1"><label for="mce-group[4601]-4601-1">Jueves 30 de mayo de 18:00 a 21:00 horas</label></li>';
+        html += '<li><input type="checkbox" value="4" name="group[4601][4]" id="mce-group[4601]-4601-2"><label for="mce-group[4601]-4601-2">Viernes 31 de mayo de 9:00 a 13:00 horas</label></li>';
+        html += '<li><input type="checkbox" value="8" name="group[4601][8]" id="mce-group[4601]-4601-3"><label for="mce-group[4601]-4601-3">Viernes 31 de mayo de 18:00 a 21:00 horas</label></li>';
+        html += '</ul>';
+        html += '</div>';
+        html += '<div id="mce-responses" class="clear">';
+        html += '<div class="response" id="mce-error-response" style="display:none"></div>';
+        html += '<div class="response" id="mce-success-response" style="display:none"></div>';
+        html += '</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->';
+        html += '<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2ce9b0b87f346aca80c5c4aff_b5b5c7069b" tabindex="-1" value=""></div>';
+        html += '<div class="clear"><input type="submit" value="Registrarme" name="subscribe" id="mc-embedded-subscribe" class="button"></div>';
+        html += '</div>';
+        html += '</form>';
+        html += '</div>';
+
         element.find('.section-body').html(html);
-
-        $('.workshop-card').click((event)=>{
-            element = event.currentTarget;
-            if($(element).hasClass('expanded')){
-                $(element).removeClass('expanded');
-                $('#background').removeClass('unfocused');
-                $('.workshop-card').each((index, workshop)=>{
-                    if(workshop.id != element.id){
-                        var actualWorkshop = $('#' + workshop.id);
-                        actualWorkshop.css('height', '150px');
-                        actualWorkshop.css('margin', '7.5px 15px');
-                    }else{
-                        var actualWorkshop = $('#' + workshop.id);
-                        actualWorkshop.find('.btn-back').html('<i class="fas fa-arrow-up"></i>');
-                    }
-                });
-                $('#workshop-information').removeClass('expanded');
-            }else{
-                $(element).addClass('expanded');
-                $('#background').addClass('unfocused');
-                $('.workshop-card').each((index, workshop)=>{
-                    if(workshop.id != element.id){
-                        var actualWorkshop = $('#' + workshop.id);
-                        actualWorkshop.css('height', '0');
-                        actualWorkshop.css('margin', '0 15px');
-                    }else{
-                        var actualWorkshop = $('#' + workshop.id);
-                        actualWorkshop.find('.btn-back').html('<i class="fas fa-plus"></i>');
-                    }
-                });
-                html = '';
-                workshops[element.id].information.forEach((element)=>{
-                    html += '<p>';
-                    html += element;
-                    html += '</p>';
-                });
-                html += '<p>';
-                html += '<i class="fas fa-tools"></i>';
-                html += workshops[element.id].tools;
-                html += '</p>';
-                html += '<p>';
-                html += '<i class="far fa-envelope"></i>';
-                var findedStaff;
-                staff.forEach((staffMember)=>{
-                    if(staffMember.name == workshops[element.id].contact){
-                        html += staffMember.email;
-                        findedStaff = staffMember;
-                    }
-                });
-                html += '</p>';
-                html += '<span class="staff">';
-                html += '<span class="staff-image">';
-                html += `<img src="assets/img/${findedStaff.image}">`;
-                html += '</span>';
-                html += '<span class="staff-name">';
-                html += findedStaff.name;
-                html += '</span>';
-                html += '</span>';
-                $('#workshop-information').html(html);
-                $('#workshop-information').addClass('expanded');
-            }
-
-            window.scroll({
-                top: 0, 
-                left: 0, 
-                behavior: 'smooth'
-            });
-        });
-
         element.css('opacity', '1');
         element.css('transform', 'translateY(0)');
         element.css('z-index', '1');
@@ -343,7 +249,7 @@
 
         html += '<span class="event-time">';
         html += '<span class="time">';
-        html += '10:00';
+        html += '00:00';
         html += '</span>';
         html += '<span class="m">';
         html += 'AM';
@@ -354,36 +260,36 @@
         html += '<span class class="date">';
         html += '</span>';
         html += '<span class="event-title">';
-        html += 'Arduino for Beginners';
+        html += 'Por ser anunciado';
         html += '</span>';
         html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
-        html += 'Salón 315';
+        html += 'Universidad Galileo';
         html += '</span>';
         html += '</span>';
 
         html += '</span>';
 
-        html += '<span class="event-card">';
+        // html += '<span class="event-card">';
 
-        html += '<span class="event-time">';
-        html += '<span class="time">';
-        html += '';
-        html += '</span>';
-        html += '<span class="m">';
-        html += '';
-        html += '</span>';
-        html += '</span>';
+        // html += '<span class="event-time">';
+        // html += '<span class="time">';
+        // html += '';
+        // html += '</span>';
+        // html += '<span class="m">';
+        // html += '';
+        // html += '</span>';
+        // html += '</span>';
 
-        html += '<span class="event-information">';
-        html += '<span class class="date">';
-        html += '</span>';
-        html += '<span class="event-title">';
-        html += 'Arduino for Beginners';
-        html += '</span>';
-        html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
-        html += 'Salón 315';
-        html += '</span>';
-        html += '</span>';
+        // html += '<span class="event-information">';
+        // html += '<span class class="date">';
+        // html += '</span>';
+        // html += '<span class="event-title">';
+        // html += 'Arduino for Beginners';
+        // html += '</span>';
+        // html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
+        // html += 'Salón 315';
+        // html += '</span>';
+        // html += '</span>';
 
         html += '</span>';
         html += '</span>';
@@ -411,12 +317,18 @@
         
     }
 
+    function getSecondName(name){
+        return name.split(" ")[1];
+    }
+
     function generateStaff(){
         var element = $('#dynamic-information');
         //element.find('.section-title').html('STAFF');
         var html = '';
+        
         html += '<span class="staff-container">';
-        staff.forEach(element => {
+
+        orderStaff.forEach(element => {
             html += `<span class="staff-card ${element.job}">`;
             //html += `<img class="staff-bg" src="assets/img/${element.image}">`;
             html += '<span class="staff-image">';
@@ -425,7 +337,7 @@
                 html += '<span class="gde-banner"><span class="img-container"><img src="assets/img/gde.png"></span></span>';
             }
             html += '<span class="staff-job">';
-            html += 'See more';
+            html += 'Ver más';
             html += '</span>';
             html += '</span>';
             html += '<span class="staff-name">';
@@ -460,7 +372,7 @@
     function hideIndex(){
         inIndex = false;
         $('#copyright').css('bottom', '-23px');
-        $('#galileo-logo').css('bottom', '-130px');
+        $('#galileo-logo').css('bottom', '-140px');
         $('#title-container').css('opacity', '0');
         $('#title-container').css('transform', 'translateY(20px)');
         $('#background').css('opacity', '0');
@@ -498,7 +410,7 @@
 
     $(window).resize(()=>{
         if(inIndex){
-            if($(window).width() > 750){
+            if($(window).width() > 650){
                 $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
                 $('.background').html('<img src="" alt="">');
                 $('.background').find('img')[0].onload = () => {
@@ -506,22 +418,105 @@
                     $('.background').css('transform', 'scale(1)');
                 }
                 $('.background').find('img').attr('src','assets/img/image93.gif');
+                var html = '';
+                html += '<img src="assets/img/gdg.png" alt="GDG">';
+                html += '<img src="assets/img/maya.png" alt="GDG Guatemala">';
+                html += '<img src="assets/img/logo2stroke.PNG" alt="Google Cloud Next">';
+                html += '<img src="assets/img/galileo-logostroke.PNG" alt="Universidad Galileo">';
+                html += '<img src="assets/img/wtm.png" alt="Women Tech Maker">';
+                $("#galileo-logo").html(html);
             }else{
                 $('#innovation-logo').attr('src','assets/img/logo3.png');
                 $('.background').html('');
+                var html = '';
+                html += '<span class="external-container">';
+                html += '<span class="left-logo">';
+                html += logos[3];
+                html += '</span>';
+                html += '<span class="center-logo">';
+                html += logos[2];
+                html += '</span>';
+                html += '<span class="right-logo">';
+                html += logos[1];
+                html += '</span>';
+                html += '</span>';
+                $("#galileo-logo").html(html);
+                activateCarousel();
             }
         }
     });
 
+    function generateSponsors(){
+
+    }
+
+    function activateCarousel(){
+        var index = 4;
+
+        if(!isCarouselOn){
+            isCarouselOn = true;
+            setInterval(()=>{
+            
+            if(inIndex){
+                var xc = $('#galileo-logo').find('.external-container');
+                var left = xc.find('.left-logo');
+                var right = xc.find('.right-logo');
+                var center = xc.find('.center-logo');
+
+                right.html(logos[index++%5]);
+
+                left.removeClass('left-logo');
+                left.addClass('center-logo');
+
+                center.removeClass('center-logo');
+                center.addClass('right-logo');
+
+                right.removeClass('right-logo');
+                right.addClass('left-logo');
+
+                left.css('transition', '2s ease');
+                left.css('right', 0);
+                left.css('left', 0);
+
+                center.css('right', '-100%');
+                center.css('left', '100%');
+
+                right.css('transition', 'none');
+                right.css('left', '-100%');
+                right.css('right', '100%');
+            }
+        }, 2000);
+        } 
+    }
+
     $(document).ready(()=>{
-        
+        var inserted = false;
+        staff.forEach((element, index) => {
+            //console.log(getSecondName(element.name))
+            inserted = false;
+            if(orderStaff.length == 0){
+                orderStaff.unshift(element);
+            }else{
+                orderStaff.forEach((actualElement, actualIndex) => {
+                    var comp = getSecondName(element.name).localeCompare(getSecondName(actualElement.name), 'en', {sensitivity: 'base'});
+                    if((comp == -1 || comp == 0) && !inserted){
+                        //console.log('SE CUMPLE');
+                        orderStaff.splice(actualIndex, 0, element);
+                        inserted = true;
+                    }
+                });
+                if(!inserted){
+                    orderStaff.push(element.name);
+                }
+            }
+        });
 
         console.log();
         $('#innovation-logo')[0].onload = ()=>{
             $('.title-container').css('opacity', '1');
         };
 
-        if($(window).width() > 750){
+        if($(window).width() > 650){
             $('#innovation-logo').attr('src','assets/img/logo1stroke.png');
             $('.background').html('<img src="" alt="">');
             $('.background').find('img')[0].onload = () => {
@@ -529,9 +524,30 @@
                 $('.background').css('transform', 'scale(1)');
             }
             $('.background').find('img').attr('src','assets/img/image93.gif');
+            var html = '';
+            html += '<img src="assets/img/gdg.png" alt="GDG">';
+            html += '<img src="assets/img/maya.png" alt="GDG Guatemala">';
+            html += '<img src="assets/img/logo2stroke.PNG" alt="Google Cloud Next">';
+            html += '<img src="assets/img/galileo-logostroke.PNG" alt="Universidad Galileo">';
+            html += '<img src="assets/img/wtm.png" alt="Women Tech Maker">';
+            $("#galileo-logo").html(html);
         }else{
             $('#innovation-logo').attr('src','assets/img/logo3.png');
             $('.background').html('');
+            var html = '';
+            html += '<span class="external-container">';
+            html += '<span class="left-logo">';
+            html += logos[3];
+            html += '</span>';
+            html += '<span class="center-logo">';
+            html += logos[2];
+            html += '</span>';
+            html += '<span class="right-logo">';
+            html += logos[1];
+            html += '</span>';
+            html += '</span>';
+            $("#galileo-logo").html(html);
+            activateCarousel();
         }
 
         $('.btn-menu').click((event)=>{
@@ -546,14 +562,14 @@
                     case 'staff-access':{
                         generateStaff();
                     }break;
-                    case 'projects-access':{
-                        //generateProjects();
+                    case 'agenda-access':{
+                        generateAgenda();
                     }break;
-                    case 'presentations-access':{
-                        //console.log('hola');
+                    case 'sponsors-access':{
+                        generateSponsors();
                     }break;
-                    case 'workshops-access':{
-                        //generateWorkshops();
+                    case 'register-access':{
+                        generateRegister();
                     }break;
                 }
             }
