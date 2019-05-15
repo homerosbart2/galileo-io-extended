@@ -402,6 +402,7 @@
         element.css('transform', 'translateY(-40px)');
         element.css('z-index', 0);
         element.css('padding', '15px 15px 70px 15px');
+        element.find('.section-body').css('padding', '0 24px');
         $('body').css('overflow-y', 'hidden');
         $('#title-container').css('z-index', '1');
         $('#background').removeClass('unfocused');
@@ -579,6 +580,7 @@
                     }break;
                     case 'place-access':{
                         $('#dynamic-information').css('padding', '0');
+                        $('#dynamic-information').find('.section-body').css('padding', '0');
                         generatePlace();
                     }break;
                     case 'register-access':{
