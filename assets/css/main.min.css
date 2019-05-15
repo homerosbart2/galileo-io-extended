@@ -1417,9 +1417,6 @@ body {
         -khtml-user-select: none;
         -webkit-user-select: none;
         -o-user-select: none; }
-      @media only screen and (max-width: 500px) {
-        .title-container .inner-container .title-container:hover .title, .title-container .inner-container .title-container:active .title, .title-container .inner-container .title-container:focus .title {
-          transform: translateY(-10px); } }
       .title-container .inner-container .title-container .title {
         transform: translateY(10px);
         color: black;

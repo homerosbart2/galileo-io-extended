@@ -43,7 +43,7 @@ var staff = [
         email : '-',
         company: '-'
     },
-        {
+    {
         name : 'Adriana Moya',
         information : 'GDE de Cloud, Python Developer en Globant y parte de las comunidades GDG Bogotá y GCDC Bogotá.',
         image : 'Adrianamoya.jpeg',
@@ -82,7 +82,5 @@ var staff = [
         email : 'adriancatalan@galileo.edu',
         gde: '1',
         company: 'Universidad Galileo'
-    },
+    }
 ];
-
-//Studied Electronical Engineering at Universidad Galileo. Currently working on workshops provided by the lab to school students in order to motivate and guide them towards learning and enjoying to work with different technologies. Her interests include AR, VR, and automation solutions.
