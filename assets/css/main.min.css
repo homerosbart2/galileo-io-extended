@@ -1382,6 +1382,20 @@ body {
       @media only screen and (max-width: 500px) {
         .dynamic-information .section-body p {
           font-size: 11px; } }
+    .dynamic-information .section-body .map-container {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+      align-items: center; }
+      .dynamic-information .section-body .map-container iframe {
+        width: 100%;
+        margin: 0 30px; }
+    .dynamic-information .section-body .register-container input {
+      color: black !important;
+      text-align: center !important; }
+    .dynamic-information .section-body .register-container form #mc_embed_signup_scroll input[type=radio], .dynamic-information .section-body .register-container form #mc_embed_signup_scroll input[type=checkbox] {
+      margin-right: 3px; }
 
 .title-container {
   position: fixed;

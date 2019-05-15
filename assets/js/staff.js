@@ -1,10 +1,11 @@
 var staff = [
       {
-        name : 'Carlo Renzo Huamán Torres',
+        name : 'Carlo Huamán',
         information : 'Android / Chatbot / Assistant Developer, GDE, Software Engineer in Avantica & Cyclist.',
         image : 'CarlosRenzo.png',
         email : '-',
-        company: 'Avantica'
+        company: 'Avantica',
+        gde: '1'
     },
      {
         name : 'Juan Ñahui',
@@ -76,9 +77,8 @@ var staff = [
     },
     {
         name : 'Adrián Catalán',
-        information : 'Innovation Lab leader and Google Developer Expert.',
+        information : 'GDE de Android, IoT y Firebase, mentor de launchpad, sprint master. Organizador de GCDC Guatemala y director del Innovation Lab de GalileoU.',
         image : 'adrian.jpg',
-        job : 'boss',
         email : 'adriancatalan@galileo.edu',
         gde: '1',
         company: 'Universidad Galileo'

@@ -57,7 +57,7 @@
                     <a id="staff-access" class="btn-menu blue">Conferencistas</a>
                     <!-- <a id="projects-access" class="btn-menu red disabled">Codelabs</a> -->
                     <a id="agenda-access" class="btn-menu red">Agenda</a>
-                    <a id="sponsors-access" class="btn-menu yellow disabled">Patrocinadores</a>
+                    <a id="place-access" class="btn-menu yellow">Sede</a>
                     <a id="register-access" class="btn-menu green solid">Registrate</a>
                 </span>
             </span>
@@ -111,7 +111,7 @@
             html += 'Información';
             html += '</span>';
             html += '<p>';
-            html += 'El objetivo del evento es servir como una introducción a distintas tecnologías a personas de distintos perfiles. Se va a separar el evento en dos partes, una parte en la mañana, para estudiantes de colegios (para motivarlos a seguir carreras tecnológicas), y en la tarde para profesionales, con los cuales el approach se pretende que sea más técnico.';
+            html += 'El evento más grande de tecnologías de Google en Guatemala.  Se contará con 11 conferencistas internacionales para dos días llenos de conferencias técnicas de machine learning, cloud, mobile, web, y product strategy. Se tendrán dos jornadas, por la mañana, enfocado en estudiantes y charlas nivel principiante-intermedio y por la noche, para profesionales con contenido intermedio-avanzado. El evento no tiene ningún costo y las dos jornadas de ambos días están abiertas a todo público.';
             html += '</p>';
             html += '<span class="subtitle">';
             html += 'Lugar y Fecha';
@@ -119,7 +119,9 @@
             html += '<p>';
             html += 'Se llevará a cabo en Universidad Galileo (Sede Central).<br>';
             html += '7a. Avenida, Calle Dr. Eduardo Suger Cofiño, zona 10.<br>';
-            html += 'Los días 30 y 31 de mayo.';
+            html += 'Los días 30 y 31 de mayo.<br><br>';
+            html += '09:00 - 13:00 (estudiantes)<br>';
+            html += '18:00 - 21:00 (profesionales)';
             html += '</p>';
         
         element.find('.section-body').html(html);
@@ -137,13 +139,13 @@
             html += 'Jueves 30 y Viernes 31 de 09:00 - 13:00';
             html += '</span>';
             html += '<p>';
-            html += 'Horario específico para estudiantes de colegio.';
+            html += 'Jornada matutina enfocada en estudiantes, con conferencias de nivel principiante e intermedio.';
             html += '</p>';
             html += '<span class="subtitle">';
             html += 'Jueves 30 y Viernes 31 de 18:00 - 21:00';
             html += '</span>';
             html += '<p>';
-            html += 'Horario específico para cualquier persona.';
+            html += 'Jornada vespertina enfocada en profesionales, con conferencias de nivel intermedio y avanzado.';
             html += '</p>';
 
         element.find('.section-body').html(html);
@@ -158,11 +160,11 @@
         var html = "";
         html += '<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">';
         html += '<style type="text/css">';
-        html += '#mc_embed_signup{background:#fff; clear:left; font:14px; }';
+        html += '#mc_embed_signup{clear:left; font:14px; }';
         html += '</style>';
-        html += '<div id="mc_embed_signup">';
+        html += '<div id="mc_embed_signup" class="register-container">';
         html += '<form action="https://galileo.us18.list-manage.com/subscribe/post?u=2ce9b0b87f346aca80c5c4aff&amp;id=b5b5c7069b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>';
-        html += '<div id="mc_embed_signup_scroll" class="register-container">';
+        html += '<div id="mc_embed_signup_scroll">';
         html += '<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>';
         html += '<div class="mc-field-group">';
         html += '<label for="mce-FNAME">Nombres  <span class="asterisk">*</span>';
@@ -399,6 +401,7 @@
         element.css('opacity', '0');
         element.css('transform', 'translateY(-40px)');
         element.css('z-index', 0);
+        element.css('padding', '15px 15px 70px 15px');
         $('body').css('overflow-y', 'hidden');
         $('#title-container').css('z-index', '1');
         $('#background').removeClass('unfocused');
@@ -446,8 +449,17 @@
         }
     });
 
-    function generateSponsors(){
+    function generatePlace(){
+        var element = $('#dynamic-information');
+        var html = '';
+        html += '<span class="map-container">';
+        html += '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.8173365635653!2d-90.50785318464814!3d14.60947918077454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a3b512ee9afb%3A0xc8255d5feb146d4a!2sUniversidad+Galileo!5e0!3m2!1sen!2sgt!4v1557936136742!5m2!1sen!2sgt" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>';
+        html += '</span>';
+        element.find('.section-body').html(html);
 
+        element.css('opacity', '1');
+        element.css('transform', 'translateY(0)');
+        element.css('z-index', '1');
     }
 
     function activateCarousel(){
@@ -565,8 +577,9 @@
                     case 'agenda-access':{
                         generateAgenda();
                     }break;
-                    case 'sponsors-access':{
-                        generateSponsors();
+                    case 'place-access':{
+                        $('#dynamic-information').css('padding', '0');
+                        generatePlace();
                     }break;
                     case 'register-access':{
                         generateRegister();
