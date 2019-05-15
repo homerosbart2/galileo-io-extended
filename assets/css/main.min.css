@@ -1356,8 +1356,6 @@ body {
         font-size: 26px; } }
   .dynamic-information .section-body {
     display: flex;
-    padding-left: 24px;
-    padding-right: 24px;
     flex-direction: column;
     width: 100%; }
     .dynamic-information .section-body .subtitle {
