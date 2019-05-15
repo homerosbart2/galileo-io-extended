@@ -490,9 +490,9 @@
     }
 
     $(document).ready(()=>{
+
         var inserted = false;
         staff.forEach((element, index) => {
-            //console.log(getSecondName(element.name))
             inserted = false;
             if(orderStaff.length == 0){
                 orderStaff.unshift(element);
@@ -506,7 +506,7 @@
                     }
                 });
                 if(!inserted){
-                    orderStaff.push(element.name);
+                    orderStaff.push(element);
                 }
             }
         });
