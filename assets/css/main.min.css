@@ -729,7 +729,10 @@ nav {
       padding-top: 150px;
       border: 6px solid transparent;
       transition: 0.3s ease;
-      cursor: pointer; }
+      cursor: pointer;
+      opacity: 0;
+      transform: scale(0.7);
+      transition: 0.3s ease; }
       .staff-container .staff-card .staff-image:hover, .staff-container .staff-card .staff-image:active, .staff-container .staff-card .staff-image:focus {
         border: 6px solid #4285f4; }
         .staff-container .staff-card .staff-image:hover + .staff-name + .staff-company + .staff-information, .staff-container .staff-card .staff-image:active + .staff-name + .staff-company + .staff-information, .staff-container .staff-card .staff-image:focus + .staff-name + .staff-company + .staff-information {
@@ -761,7 +764,8 @@ nav {
         justify-content: center;
         align-items: center;
         opacity: 0;
-        text-shadow: 0 0 15px rgba(0, 0, 0, 0.34); }
+        text-shadow: 0 0 15px rgba(0, 0, 0, 0.34);
+        color: #4285f4; }
       .staff-container .staff-card .staff-image .gde-banner {
         background: #eeeeee;
         position: absolute;
