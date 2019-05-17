@@ -1,4 +1,11 @@
 var staff = [
+       {
+        name : 'Hansy Schmitt',
+        information : 'Desarrollador Mobile especializado en Flutter y Android, manager de la comunidad cloud de Lima/Peru (GCDC Lima) , con interes en hacking etico, ingenieria reversa, domotica y Voice interfaces.',
+        image : 'hansy.jpg',
+        email : '-',
+        company: '-'
+    },
       {
         name : 'Carlo Huamán',
         information : 'Android / Chatbot / Assistant Developer, GDE, Software Engineer in Avantica & Cyclist.',
