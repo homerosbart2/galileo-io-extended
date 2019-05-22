@@ -100,7 +100,7 @@
     var inExpanded = false;
     var orderStaff = new Array();
 
-    var logos = ['<img src="assets/img/gdg.png" alt="GDG">', '<img src="assets/img/maya.png" alt="GDG Guatemala">', '<img src="assets/img/logo2stroke.PNG" alt="Google Cloud Next">', '<img src="assets/img/galileo-logostroke.PNG" alt="Universidad Galileo">', '<img src="assets/img/wtm.png" alt="Women Tech Maker">'];
+    var logos = ['assets/img/gdg.png', 'assets/img/maya.png', 'assets/img/logo2stroke.PNG', 'assets/img/galileo-logostroke.PNG', 'assets/img/wtm.png'];
 
 
     function generateHome(){
@@ -434,25 +434,33 @@
                 }
                 $('.background').find('img').attr('src','assets/img/image93.gif');
                 var html = '';
-                html += '<img src="assets/img/gdg.png" alt="GDG">';
-                html += '<img src="assets/img/maya.png" alt="GDG Guatemala">';
-                html += '<img src="assets/img/logo2stroke.PNG" alt="Google Cloud Next">';
-                html += '<img src="assets/img/galileo-logostroke.PNG" alt="Universidad Galileo">';
+                html += '<img src="" img-path="assets/img/gdg.png" alt="GDG">';
+                html += '<img src="" img-path="assets/img/maya.png" alt="GDG Guatemala">';
+                html += '<img src="" img-path="assets/img/logo2stroke.PNG" alt="Google Cloud Next">';
+                html += '<img src="" img-path="assets/img/galileo-logostroke.PNG" alt="Universidad Galileo">';
                 html += '<img src="assets/img/wtm.png" alt="Women Tech Maker">';
                 $("#galileo-logo").html(html);
+
+                $("#galileo-logo").find('img').each((index, element)=>{
+                    element.onload = () => {
+                        $(element).css('opacity', '1');
+                    }
+
+                    $(element).attr('src', $(element).attr('img-path'));
+                });
             }else{
                 $('#innovation-logo').attr('src','assets/img/logo3.png');
                 $('.background').html('');
                 var html = '';
                 html += '<span class="external-container">';
                 html += '<span class="left-logo">';
-                html += logos[3];
+                html += '<img src="">';
                 html += '</span>';
                 html += '<span class="center-logo">';
-                html += logos[2];
+                html += '<img src="">';
                 html += '</span>';
                 html += '<span class="right-logo">';
-                html += logos[1];
+                html += '<img src="">';
                 html += '</span>';
                 html += '</span>';
                 $("#galileo-logo").html(html);
@@ -477,43 +485,70 @@
     function activateCarousel(){
         var index = 4;
 
+        var leftElement = $('#galileo-logo').find('.external-container').find('.left-logo').find('img');
+        leftElement[0].onload = () => {
+            leftElement.css('opacity', '1');
+        };
+        leftElement.attr('src', logos[3]);
+        var centerElement = $('#galileo-logo').find('.external-container').find('.center-logo').find('img');
+        centerElement[0].onload = () => {
+            centerElement.css('opacity', '1');
+        };
+        centerElement.attr('src', logos[2]);
+        var rightElement = $('#galileo-logo').find('.external-container').find('.right-logo').find('img');
+        rightElement[0].onload = () => {
+            rightElement.css('opacity', '1');
+        };
+        rightElement.attr('src', logos[1]);
+
         if(!isCarouselOn){
             isCarouselOn = true;
             setInterval(()=>{
             
-            if(inIndex){
-                var xc = $('#galileo-logo').find('.external-container');
-                var left = xc.find('.left-logo');
-                var right = xc.find('.right-logo');
-                var center = xc.find('.center-logo');
+                if(inIndex){
+                    var xc = $('#galileo-logo').find('.external-container');
+                    var left = xc.find('.left-logo');
+                    var right = xc.find('.right-logo');
+                    var center = xc.find('.center-logo');
 
-                right.html(logos[index++%5]);
+                    right.find('img').attr('src', logos[index++%5]);
 
-                left.removeClass('left-logo');
-                left.addClass('center-logo');
+                    left.removeClass('left-logo');
+                    left.addClass('center-logo');
 
-                center.removeClass('center-logo');
-                center.addClass('right-logo');
+                    center.removeClass('center-logo');
+                    center.addClass('right-logo');
 
-                right.removeClass('right-logo');
-                right.addClass('left-logo');
+                    right.removeClass('right-logo');
+                    right.addClass('left-logo');
 
-                left.css('transition', '3s ease');
-                left.css('right', 0);
-                left.css('left', 0);
+                    left.css('transition', '3s ease');
+                    left.css('right', 0);
+                    left.css('left', 0);
 
-                center.css('right', '-100%');
-                center.css('left', '100%');
+                    center.css('right', '-100%');
+                    center.css('left', '100%');
 
-                right.css('transition', 'none');
-                right.css('left', '-100%');
-                right.css('right', '100%');
-            }
-        }, 3000);
+                    right.css('transition', 'none');
+                    right.css('left', '-100%');
+                    right.css('right', '100%');
+                }
+            }, 3000);
         } 
     }
 
     $(document).ready(()=>{
+
+        if(window.location.hash) {
+            var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+            if(hash == 'register'){
+                hideIndex();
+                generateRegister();
+            }
+            // hash found
+        } else {
+            // No hash found
+        }
 
         var inserted = false;
         staff.forEach((element, index) => {
@@ -537,7 +572,7 @@
 
         console.log();
         $('#innovation-logo')[0].onload = ()=>{
-            $('.title-container').css('opacity', '1');
+            if(inIndex) $('.title-container').css('opacity', '1');
         };
 
         if($(window).width() > 650){
@@ -549,25 +584,33 @@
             }
             $('.background').find('img').attr('src','assets/img/image93.gif');
             var html = '';
-            html += '<img src="assets/img/gdg.png" alt="GDG">';
-            html += '<img src="assets/img/maya.png" alt="GDG Guatemala">';
-            html += '<img src="assets/img/logo2stroke.PNG" alt="Google Cloud Next">';
-            html += '<img src="assets/img/galileo-logostroke.PNG" alt="Universidad Galileo">';
+            html += '<img src="" img-path="assets/img/gdg.png" alt="GDG">';
+            html += '<img src="" img-path="assets/img/maya.png" alt="GDG Guatemala">';
+            html += '<img src="" img-path="assets/img/logo2stroke.PNG" alt="Google Cloud Next">';
+            html += '<img src="" img-path="assets/img/galileo-logostroke.PNG" alt="Universidad Galileo">';
             html += '<img src="assets/img/wtm.png" alt="Women Tech Maker">';
             $("#galileo-logo").html(html);
+
+            $("#galileo-logo").find('img').each((index, element)=>{
+                element.onload = () => {
+                    $(element).css('opacity', '1');
+                }
+
+                $(element).attr('src', $(element).attr('img-path'));
+            });
         }else{
             $('#innovation-logo').attr('src','assets/img/logo3.png');
             $('.background').html('');
             var html = '';
             html += '<span class="external-container">';
             html += '<span class="left-logo">';
-            html += logos[3];
+            html += '<img src="">';
             html += '</span>';
             html += '<span class="center-logo">';
-            html += logos[2];
+            html += '<img src="">';
             html += '</span>';
             html += '<span class="right-logo">';
-            html += logos[1];
+            html += '<img src="">';
             html += '</span>';
             html += '</span>';
             $("#galileo-logo").html(html);
