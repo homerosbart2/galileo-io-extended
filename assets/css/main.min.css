@@ -1242,7 +1242,8 @@ body {
   transition: 0.4s ease; }
   @media only screen and (max-width: 650px) {
     .galileo-logo {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      z-index: -1; }
       .galileo-logo .external-container {
         position: relative;
         display: flex;
