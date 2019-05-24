@@ -1,5 +1,13 @@
 var staff = [
        {
+        name : 'Walter Corado',
+        information : 'Ingeniero en Sistemas dedicado al desarrollo de Aplicaciones Web empleando metodologías de Desarrollo Ágil, ha trabajado en diferentes proyectos de desarrollo en diferentes empresas y es encargado de la comunidad Node.js en Guatemala.',
+        image : 'Walter_Cordero.JPG',
+        nationality: 'guatemala',
+        email : '-',
+        company: 'Universidad Galileo'
+    },
+       {
         name : 'Andrés Castellanos',
         information : 'Ingeniero en Sistemas, miembro del Laboratorio Turing de Universidad Galileo, apasionado por aprender tecnologías state-of-the-art y en crear nuevas cosas',
         image : 'castellanos.jpeg',
