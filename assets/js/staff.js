@@ -150,7 +150,7 @@ var staff = [
     },
     {
         name : 'Diego Coy',
-        information : 'Desarrollador web apasionado por compartir conocimiento.',
+        information : 'Google Developer Expert de Web y desarrollador web apasionado por compartir conocimiento.',
         image : 'diegocoy.png',
         email : '-',
         nationality: 'colombia',
