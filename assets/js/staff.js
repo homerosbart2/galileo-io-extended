@@ -8,7 +8,7 @@ var staff = [
         company: 'Universidad Galileo'
     },
        {
-        name : 'Herberth Guillermo Obregón Espini',
+        name : 'Herberth Obregón ',
         information : 'Soy CTO de Conectate Today, plataforma que ayuda a la difusión y generación de empleo, soy apasionado a las tecnologías de Google.',
         image : 'Herberth.png',
         nationality: 'guatemala',
@@ -25,7 +25,7 @@ var staff = [
     },
        {
         name : 'César Calderón',
-        information : 'Consultor de seguridad / Pentester en la empresa Devel Security S.A. Cuento con varios años de experiencia en el sector de la ciberseguridad enfocado a la auditorías de aplicaciones móviles, web e infraestructura y en este último año me he dedicado a realizar múltiples retos de seguridad informática para diferentes eventos.',
+        information : 'Consultor de seguridad / Pentester en la empresa Devel Security S.A. Cuento con varios años de experiencia en el sector de la ciberseguridad enfocado a la auditorías de aplicaciones móviles, web e infraestructura.',
         image : 'Cesar calderon.jpeg',
         nationality: 'guatemala',
         email : '-',
