@@ -5,7 +5,7 @@ var staff = [
         image : 'Walter_Cordero.JPG',
         nationality: 'guatemala',
         email : '-',
-        company: 'Universidad Galileo'
+        company: '-'
     },
        {
         name : 'Andrés Castellanos',
