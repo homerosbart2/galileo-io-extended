@@ -163,6 +163,7 @@ var staff = [
         image : 'adrian.jpg',
         email : 'adriancatalan@galileo.edu',
         gde: '1',
-        company: 'Universidad Galileo'
+        company: 'Universidad Galileo',
+        nationality: 'guatemala'
     }
 ];

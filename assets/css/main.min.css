@@ -784,13 +784,20 @@ nav {
             height: 45px;
             width: 100px; }
     .staff-container .staff-card .staff-name {
+      display: flex;
+      align-items: center;
       margin-top: 5px;
       color: black;
-      display: flex;
       justify-content: center;
       font-size: 16px;
       font-weight: bold;
       z-index: 1; }
+      .staff-container .staff-card .staff-name .staff-flag {
+        display: flex;
+        align-items: center;
+        margin-right: 6px; }
+        .staff-container .staff-card .staff-name .staff-flag img {
+          width: 16px; }
     .staff-container .staff-card .staff-company {
       color: gray;
       z-index: 1; }
@@ -879,11 +886,18 @@ nav {
       font-size: 18px;
       font-weight: bold;
       z-index: 1; }
+      .dynamic-expanded-information .section-body .staff-expanded-card .staff-name .staff-flag {
+        display: flex;
+        align-items: center;
+        margin-right: 6px; }
+        .dynamic-expanded-information .section-body .staff-expanded-card .staff-name .staff-flag img {
+          width: 20px; }
     .dynamic-expanded-information .section-body .staff-expanded-card .staff-company {
       color: gray;
       z-index: 1; }
     .dynamic-expanded-information .section-body .staff-expanded-card .staff-information {
       padding: 5px 10px;
+      margin-top: 3px;
       background: #AECBFA; }
 
 .events-container {
@@ -891,6 +905,11 @@ nav {
   display: flex;
   width: 100%;
   flex-direction: column; }
+  .events-container .event-date {
+    padding: 6px 6px 0 6px;
+    margin: 0 16px;
+    font-size: 20px;
+    font-weight: 400; }
   .events-container .event-card {
     display: flex;
     flex-direction: row;
@@ -910,8 +929,17 @@ nav {
       font-weight: bold;
       display: flex;
       width: 100%; }
-    .events-container .event-card .event-information .event-ubication i {
-      margin-right: 6px; }
+    .events-container .event-card .event-information .subjects-container .event-ubication {
+      margin-right: 24px; }
+      .events-container .event-card .event-information .subjects-container .event-ubication i {
+        margin-right: 6px;
+        font-size: 12px; }
+    .events-container .event-card .event-information .subjects-container .event-subject {
+      margin-right: 12px; }
+      .events-container .event-card .event-information .subjects-container .event-subject i {
+        margin-right: 6px;
+        font-size: 10px;
+        color: gray; }
 
 .workshops-container {
   margin-top: 25px;
@@ -1185,6 +1213,18 @@ nav {
 /* <span class="youtube-video">
         <iframe width="640" height="360" src="https://www.youtube.com/embed/-i4bVY8lEWE" frameborder="0" allowfullscreen=""></iframe>
     </span> */
+.agenda-container .subtitle {
+  padding: 6px 6px 0 6px !important;
+  margin: 0 16px; }
+
+.agenda-container p {
+  padding: 5px 10px !important;
+  margin: 0 22px !important;
+  background: #FAD2CF; }
+
+.agenda-container .events-container {
+  margin-top: 30px; }
+
 .background {
   position: fixed;
   display: flex;
@@ -1367,7 +1407,7 @@ body {
     width: 100%; }
     .dynamic-information .section-body .subtitle {
       padding: 0 15px;
-      font-size: 24px;
+      font-size: 20px;
       display: flex;
       margin-top: 18px; }
       @media only screen and (max-width: 650px) {

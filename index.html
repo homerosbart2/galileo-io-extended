@@ -32,8 +32,7 @@
     <script src="assets/js/jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="assets/js/staff.js" type="text/javascript"></script>
-    <script src="assets/js/workshops.js" type="text/javascript"></script>
-    <script src="assets/js/projects.js" type="text/javascript"></script>
+    <script src="assets/js/events.js" type="text/javascript"></script>
     
 
 
@@ -135,18 +134,87 @@
         var element = $('#dynamic-information');
 
         var html = "";
+            html += '<span class="agenda-container">';
             html += '<span class="subtitle">';
-            html += 'Jueves 30 y Viernes 31 de 09:00 - 13:00';
+            html += 'Horario de 09:00 a 13:00';
             html += '</span>';
             html += '<p>';
             html += 'Jornada matutina enfocada en estudiantes, con conferencias de nivel principiante e intermedio.';
             html += '</p>';
             html += '<span class="subtitle">';
-            html += 'Jueves 30 y Viernes 31 de 18:00 - 21:00';
+            html += 'Horario de 18:00 a 21:00';
             html += '</span>';
             html += '<p>';
             html += 'Jornada vespertina enfocada en profesionales, con conferencias de nivel intermedio y avanzado.';
             html += '</p>';
+
+            html += '<span class="events-container">';
+
+        var oldDay = '0';
+        var oldHour = 25;
+        var oldMinutes = '61';
+        events.forEach((event)=>{
+
+            var hour = parseInt(event.time.substring(0, 2));
+            var ap = (hour >= 12)? 'PM' : 'AM';
+            hour = (hour > 12)? hour - 12 : hour;
+            var strHour = (hour < 10)? `0${hour}` : `${hour}`;
+            var strMinutes = event.time.substring(3, 5);
+            var strTime = `${strHour}:${strMinutes}`;
+
+            if(oldMinutes == strMinutes && oldHour == hour){
+                strHour = '';
+                strMinutes = '';
+                strTime = '';
+                ap = '';
+            }else{
+                oldHour = hour;
+                oldMinutes = strMinutes;
+            }
+
+            if(oldDay != event.day){
+                html += '<span class="event-date">';
+                if(event.day == 30) html += 'Jueves, 30 de mayo';
+                else if(event.day == 31) html += 'Viernes, 31 de mayo';
+                html += '</span>';
+                oldDay = event.day;
+            }
+
+            html += '<span class="event-card">';
+
+            html += '<span class="event-time">';
+            html += '<span class="time">';
+            html += strTime;
+            html += '</span>';
+            html += '<span class="m">';
+            html += ap;
+            html += '</span>';
+            html += '</span>';
+
+            html += '<span class="event-information">';
+            html += '<span class class="date">';
+            html += '</span>';
+            html += '<span class="event-title">';
+            html += event.name;
+            html += '</span>';
+            html += '<span class="subjects-container">';
+            html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
+            html += event.place;
+            html += '</span>';
+            event.subjects.forEach((subject)=>{
+                html += '<span class="event-subject"><i class="fas fa-circle"></i>';
+                html += subject;
+                html += '</span>';
+            });
+            html += '</span>';
+            html += '</span>';
+
+            html += '</span>';
+        });
+
+        html += '</span>';
+        
+        html += '</span>';
 
         element.find('.section-body').html(html);
         element.css('opacity', '1');
@@ -242,56 +310,58 @@
 
         html += '</span>';
 
-        html += `<span class="staff-name">${name}</span>`;
+        html += '<span class="staff-name">';
+        html += `<span class="staff-flag"><img src="assets/img/${findedStaff.nationality}.png"></span>`;
+        html += name;
+        html += '</span>';
         html += `<span class="staff-company">${findedStaff.company}</span>`;
         html += `<span class="staff-information">${findedStaff.information}</span>`;
 
         html += '<span class="events-container">';
-        html += '<span class="event-card">';
 
-        html += '<span class="event-time">';
-        html += '<span class="time">';
-        html += '00:00';
-        html += '</span>';
-        html += '<span class="m">';
-        html += 'AM';
-        html += '</span>';
-        html += '</span>';
+        events.forEach((event)=>{
+            if(event.speaker == name){
+                var oldDay = '0';
 
-        html += '<span class="event-information">';
-        html += '<span class class="date">';
-        html += '</span>';
-        html += '<span class="event-title">';
-        html += 'Por ser anunciado';
-        html += '</span>';
-        html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
-        html += 'Universidad Galileo';
-        html += '</span>';
-        html += '</span>';
+                var hour = parseInt(event.time.substring(0, 2));
+                var ap = (hour >= 12)? 'PM' : 'AM';
+                hour = (hour > 12)? hour - 12 : hour;
+                var strHour = (hour < 10)? `0${hour}` : `${hour}`;
+                var strMinutes = event.time.substring(3, 5);
 
-        html += '</span>';
+                if(oldDay != event.day){
+                    html += '<span class="event-date">';
+                    if(event.day == 30) html += 'Jueves, 30 de mayo';
+                    else if(event.day == 31) html += 'Viernes, 31 de mayo';
+                    html += '</span>';
+                    oldDay = event.day;
+                }
 
-        // html += '<span class="event-card">';
+                html += '<span class="event-card">';
 
-        // html += '<span class="event-time">';
-        // html += '<span class="time">';
-        // html += '';
-        // html += '</span>';
-        // html += '<span class="m">';
-        // html += '';
-        // html += '</span>';
-        // html += '</span>';
+                html += '<span class="event-time">';
+                html += '<span class="time">';
+                html += `${strHour}:${strMinutes}`;
+                html += '</span>';
+                html += '<span class="m">';
+                html += ap;
+                html += '</span>';
+                html += '</span>';
 
-        // html += '<span class="event-information">';
-        // html += '<span class class="date">';
-        // html += '</span>';
-        // html += '<span class="event-title">';
-        // html += 'Arduino for Beginners';
-        // html += '</span>';
-        // html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
-        // html += 'Salón 315';
-        // html += '</span>';
-        // html += '</span>';
+                html += '<span class="event-information">';
+                html += '<span class class="date">';
+                html += '</span>';
+                html += '<span class="event-title">';
+                html += event.name;
+                html += '</span>';
+                html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
+                html += event.place;
+                html += '</span>';
+                html += '</span>';
+
+                html += '</span>';
+            }
+        });
 
         html += '</span>';
         html += '</span>';
@@ -344,6 +414,7 @@
             html += '</span>';
             html += '</span>';
             html += '<span class="staff-name">';
+            html += `<span class="staff-flag"><img src="assets/img/${element.nationality}.png"></span>`;
             html += element.name;
             html += '</span>';
             html += '<span class="staff-company">';
@@ -377,7 +448,7 @@
         $('.staff-image').click((event)=>{
             element = $(event.currentTarget);
             var image_path = element.find('.img').attr('src');
-            var name = element.parent().find('.staff-name').html();
+            var name = element.parent().find('.staff-name').text();
             var gde = element.find('.gde-banner');
             generateExpandedStaff(image_path, name, gde);
         });
