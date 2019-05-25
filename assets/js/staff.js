@@ -1,5 +1,13 @@
 var staff = [
        {
+        name : 'Norman Vicente',
+        information : 'Estudiante universitario, back-end, apasionado por el desarrollo.',
+        image : 'norman.jpg',
+        nationality: 'guatemala',
+        email : '-',
+        company: '-'
+    },
+       {
         name : 'Walter Corado',
         information : 'Ingeniero en Sistemas dedicado al desarrollo de Aplicaciones Web empleando metodologías de Desarrollo Ágil, ha trabajado en diferentes proyectos de desarrollo en diferentes empresas y es encargado de la comunidad Node.js en Guatemala.',
         image : 'Walter_Cordero.JPG',
