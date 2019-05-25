@@ -354,8 +354,15 @@
                 html += '<span class="event-title">';
                 html += event.name;
                 html += '</span>';
+                html += '<span class="subjects-container">';
                 html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
                 html += event.place;
+                html += '</span>';
+                event.subjects.forEach((subject)=>{
+                    html += '<span class="event-subject"><i class="fas fa-circle"></i>';
+                    html += subject;
+                    html += '</span>';
+                });
                 html += '</span>';
                 html += '</span>';
 
