@@ -194,7 +194,7 @@
             html += '<span class="event-information">';
             html += '<span class class="date">';
             html += '</span>';
-            html += '<span class="event-title">';
+            html += '<span class="event-title">'; 
             html += event.name;
             html += '</span>';
             html += '<span class="subjects-container">';
@@ -213,7 +213,7 @@
         });
 
         html += '</span>';
-        
+
         html += '</span>';
 
         element.find('.section-body').html(html);
@@ -319,9 +319,9 @@
 
         html += '<span class="events-container">';
 
+        var oldDay = '0';
         events.forEach((event)=>{
             if(event.speaker == name){
-                var oldDay = '0';
 
                 var hour = parseInt(event.time.substring(0, 2));
                 var ap = (hour >= 12)? 'PM' : 'AM';
