@@ -1,4 +1,12 @@
 var staff = [
+        {
+        name : 'Yefri Salazar',
+        information : 'Desarrollador de sistemas para internet de las cosas , emprendedor, pocaster, streamer , divulgador',
+        image : 'yefrisalazar.jpeg',
+        nationality: 'guatemala',
+        email : '-',
+        company: '-'
+    },
        {
         name : 'Norman Vicente',
         information : 'Estudiante universitario, back-end, apasionado por el desarrollo.',
