@@ -10,7 +10,7 @@ var staff = [
        {
         name : 'Norman Vicente',
         information : 'Estudiante universitario, back-end, apasionado por el desarrollo.',
-        image : 'norman.jpg',
+        image : 'norman1.jpg',
         nationality: 'guatemala',
         email : '-',
         company: '-'
