@@ -919,7 +919,8 @@ nav {
   .events-container .event-card {
     display: flex;
     flex-direction: row;
-    padding: 6px; }
+    padding: 6px;
+    margin-right: 22px; }
     .events-container .event-card .event-time {
       min-width: 38px;
       display: flex;
