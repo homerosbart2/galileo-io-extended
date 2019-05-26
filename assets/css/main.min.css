@@ -899,6 +899,9 @@ nav {
       padding: 5px 10px;
       margin-top: 3px;
       background: #AECBFA; }
+      @media only screen and (max-width: 650px) {
+        .dynamic-expanded-information .section-body .staff-expanded-card .staff-information {
+          font-size: 12px; } }
 
 .events-container {
   margin-top: 6px;
@@ -910,6 +913,9 @@ nav {
     margin: 0 16px;
     font-size: 20px;
     font-weight: 400; }
+    @media only screen and (max-width: 650px) {
+      .events-container .event-date {
+        font-size: 18px; } }
   .events-container .event-card {
     display: flex;
     flex-direction: row;
@@ -925,6 +931,11 @@ nav {
         font-size: 15px; }
       .events-container .event-card .event-time .m {
         font-size: 13px; }
+      @media only screen and (max-width: 650px) {
+        .events-container .event-card .event-time .time {
+          font-size: 13px; }
+        .events-container .event-card .event-time .m {
+          font-size: 11px; } }
     .events-container .event-card .event-information .event-title {
       font-weight: bold;
       display: flex;
@@ -940,6 +951,9 @@ nav {
         margin-right: 6px;
         font-size: 10px;
         color: gray; }
+    @media only screen and (max-width: 650px) {
+      .events-container .event-card .event-information {
+        font-size: 12px; } }
 
 .workshops-container {
   margin-top: 25px;
@@ -1412,10 +1426,7 @@ body {
       margin-top: 18px; }
       @media only screen and (max-width: 650px) {
         .dynamic-information .section-body .subtitle {
-          font-size: 20px; } }
-      @media only screen and (max-width: 500px) {
-        .dynamic-information .section-body .subtitle {
-          font-size: 16px; } }
+          font-size: 18px; } }
     .dynamic-information .section-body p {
       padding: 15px 15px;
       text-align: justify;
@@ -1424,9 +1435,6 @@ body {
       @media only screen and (max-width: 650px) {
         .dynamic-information .section-body p {
           font-size: 12px; } }
-      @media only screen and (max-width: 500px) {
-        .dynamic-information .section-body p {
-          font-size: 11px; } }
     .dynamic-information .section-body .map-container {
       display: flex;
       width: 100%;
