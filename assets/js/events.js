@@ -204,7 +204,7 @@ var events = [
 		description : 'TBA',
 		speaker : 'Isabel Palomar',
 		day : '31',
-		time : '9:45',
+		time : '09:45',
 		place : 'Salón 2',
 		subjects : []
 	},
