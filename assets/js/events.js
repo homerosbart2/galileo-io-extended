@@ -262,7 +262,7 @@ var events = [
 		description : '¿Se pueden construir satélites con componentes comunes y corrientes?',
 		speaker : 'José Bagur',
 		day : '31',
-		time : '9:00',
+		time : '09:00',
 		place : 'Salón 2',
 		subjects : [
 			'Maker'
