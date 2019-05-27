@@ -24,7 +24,7 @@ var staff = [
         company: '-'
     },
     {
-        name: 'Walter Corado',
+        name: 'Walter Cordero',
         information: 'Ingeniero en Sistemas dedicado al desarrollo de Aplicaciones Web empleando metodologías de Desarrollo Ágil, ha trabajado en diferentes proyectos de desarrollo en diferentes empresas y es encargado de la comunidad Node.js en Guatemala.',
         image: 'Walter_Cordero.JPG',
         nationality: 'guatemala',
