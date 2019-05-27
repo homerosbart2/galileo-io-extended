@@ -240,7 +240,7 @@ var events = [
 		]
 	},
 	{
-		name : 'Design Thinking - metodologías y prácticas para innovar'
+		name : 'Design Thinking - metodologías y prácticas para innovar',
 		description : 'Taller introductorio y creativo para entender Design Thinking y descubrir herramientas para identificar retos y desarrollar soluciones innovadoras',
 		speaker : 'Kenza Zuoaoui',
 		day : '31',
@@ -251,7 +251,7 @@ var events = [
 		]
 	},
 	{
-		name : 'Design Thinking - metodologías y prácticas para innovar'
+		name : 'Design Thinking - metodologías y prácticas para innovar',
 		description : 'Taller introductorio y creativo para entender Design Thinking y descubrir herramientas para identificar retos y desarrollar soluciones innovadoras',
 		speaker : 'Kenza Zuoaoui',
 		day : '31',
