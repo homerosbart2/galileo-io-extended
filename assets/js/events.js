@@ -227,5 +227,16 @@ var events = [
 		subjects : [
 			'Inteligencia Artificial'
 		]
+	},
+	{
+		name : 'Creando aplicaciones sin servidores con Google Cloud Functions',
+		description : 'Vamos a conocer un servicio de Google Cloud Platform que nos permite realizar tareas con funciones de backend alojadas sobre Google Cloud.',
+		speaker : 'Adriana Moya',
+		day : '31',
+		time : '18:30',
+		place : 'Salón 1',
+		subjects : [
+			'Google Cloud', 'Serverless'
+		]
 	}
 ];
