@@ -216,5 +216,16 @@ var events = [
 		time : '11:45',
 		place : 'Salón 3',
 		subjects : []
+	},
+	{
+		name : 'AutoML',
+		description : 'TBA',
+		speaker : 'Pablo Villanueva',
+		day : '31',
+		time : '18:30',
+		place : 'Salón 2',
+		subjects : [
+			'Inteligencia Artificial'
+		]
 	}
 ];
