@@ -452,7 +452,7 @@ var events = [
 		subjects: [
 			'Inteligencia Artificial'
 		],
-		tba = '0'
+		tba : '0'
 	},
 
 	{
