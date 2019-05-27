@@ -189,5 +189,32 @@ var events = [
 		time : '20:10',
 		place : 'Salón 3',
 		subjects : []
+	},
+		{
+		name : 'TBA',
+		description : 'TBA',
+		speaker : 'Pablo Villanueva',
+		day : '31',
+		time : '10:30',
+		place : 'Salón 1',
+		subjects : []
+	},
+	{
+		name : 'TBA',
+		description : 'TBA',
+		speaker : 'Isabel Palomar',
+		day : '31',
+		time : '9:45',
+		place : 'Salón 2',
+		subjects : []
+	},
+	{
+		name : 'TBA',
+		description : 'TBA',
+		speaker : 'Adriana Moya',
+		day : '31',
+		time : '11:45',
+		place : 'Salón 3',
+		subjects : []
 	}
 ];
