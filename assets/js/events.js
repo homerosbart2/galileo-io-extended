@@ -274,7 +274,7 @@ var events = [
 		description : 'TBA',
 		speaker : 'Walter Cordero',
 		day : '31',
-		time : '9:00',
+		time : '09:00',
 		place : 'Salón 3',
 		subjects : [],
 		tba : '0'
