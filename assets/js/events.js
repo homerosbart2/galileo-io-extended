@@ -116,5 +116,78 @@ var events = [
 		time : '19:30',
 		place : 'Salón 1',
 		subjects : []
+	},
+	{
+		name : 'Diseño responsivo en Flutter',
+		description : 'TBA',
+		speaker : 'Hansy Schmitt',
+		day : '30',
+		time : '20:10',
+		place : 'Salón 1',
+		subjects : [
+			'Flutter'
+		]
+	},
+	{
+		name : 'Progressive Web Apps, the new trend to create Apps',
+		description : 'TBA',
+		speaker : 'Walter Cordero',
+		day : '30',
+		time : '18:30',
+		place : 'Salón 2',
+		subjects : [
+			'PWA'
+		]
+	},
+	{
+		name : '¿Por qué Flutter sería una buena elección para su empresa?',
+		description : 'Actualmente tenemos el dilema de las aplicaciones, no sabemos si elegir aplicaciones nativas o híbridas. Breve introducción a Flutter y cómo podría ser la opción correcta para su empresa.',
+		speaker : 'Diego Velásquez',
+		day : '30',
+		time : '19:30',
+		place : 'Salón 2',
+		subjects : [
+			'Flutter'
+		]
+	},
+	{
+		name : 'TBA',
+		description : 'TBA',
+		speaker : 'Víctor Orozco',
+		day : '30',
+		time : '20:10',
+		place : 'Salón 2',
+		subjects : []
+	},
+	{
+		name : 'Severless Architecture for our Actions powered by Google',
+		description : 'Cómo podemos tener una potente arquitectura sostenida en Google Cloud para nuestras Actions.',
+		speaker : 'Carlo Huamán',
+		day : '30',
+		time : '18:30',
+		place : 'Salón 3',
+		subjects : [
+			'Serverless', 'Google Cloud'
+		]
+	},
+	{
+		name : 'Corrutinas en Android',
+		description : 'Implementación y proceso de las corrutinas de Kotlin, para manejarlos en MVP, MVVM, Clean Architecture y componentes de arquitectura.',
+		speaker : 'Diego Ramírez',
+		day : '30', 
+		time : '19:30',
+		place : 'Salón 3',
+		subjects : [
+			'Kotlin'
+		]
+	},
+	{
+		name : 'Conectate Today: Google Full-Stack',
+		description : 'Demostración de integración de servicios de Google para desarrollar sin preocuparse del escalado de la aplicación o disponibilidad de recursos.',
+		speaker : 'Herberth Obregón',
+		day : '30',
+		time : '20:10',
+		place : 'Salón 3',
+		subjects : []
 	}
 ];
