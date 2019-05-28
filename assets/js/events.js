@@ -14,12 +14,14 @@ var events = [
 	{
 		name : 'TBA',
 		description : 'TBA',
-		speaker : 'TBA',
+		speaker : 'Ángel Chanquín',
 		day : '30',
 		time : '09:45',
 		place : 'Salón 2',
-		subjects : [],
-		tba : '1'
+		subjects : [
+			'Google Cloud', 'App Engine'
+		],
+		tba : '0'
 	},
 	{
 		name : 'Integrating Google Dialogflow and Messenger',
@@ -72,23 +74,27 @@ var events = [
 	},
 
 	{
-		name : 'TBA',
+		name : 'Innovación como catalizador de desarrollo',
 		description : 'TBA',
-		speaker : 'TBA',
+		speaker : 'Manolo Guerrero',
 		day : '30',
 		time : '11:45',
 		place : 'Salón 1',
-		subjects : [],
-		tba : '1'
+		subjects : [
+			'Innovación'
+		],
+		tba : '0'
 	},
 	{
-		name : 'TBA',
-		description : 'TBA',
+		name : 'Google Apps Script 101',
+		description : 'Empezar con Google Apps Script es tan sencillo como tener acceso a internet y una cuenta de Gmail; en esta sesión revisaremos los conceptos básicos y una demo que integrará un formulario, una hoja de cálculo y Gmail.',
 		speaker : 'Katherine Chauca',
 		day : '30',
 		time : '11:45',
 		place : 'Salón 2',
-		subjects : [],
+		subjects : [
+			'Google Apps Script'
+		],
 		tba : '0'
 	},
 	{
@@ -129,14 +135,16 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'TBA',
+		name : 'Investigación e innovación en el área de la Inteligencia Artificial',
 		description : 'TBA',
-		speaker : 'TBA',
+		speaker : 'Bitzel Enríquez',
 		day : '30',
 		time : '12:30',
 		place : 'Salón 3',
-		subjects : [],
-		tba : '1'
+		subjects : [
+			'Inteligencia Artificial'
+		],
+		tba : '0'
 	},
 
 	{
@@ -178,13 +186,15 @@ var events = [
 
 
 	{
-		name : 'TBA',
-		description : 'TBA',
+		name : 'Desarrollando G Suite Business Apps',
+		description : 'El desafío número uno que enfrentan las empresas para desarrollar aplicaciones personalizadas es la dificultad de construirlas a tiempo. En esta sesión exploraremos las mejores prácticas para desarrollar aplicaciones de negocios de G Suite y veremos un caso práctico analizando un pipeline que permite guardar los documentos adjuntos de Gmail en Drive.',
 		speaker : 'Katherine Chauca',
 		day : '30',
 		time : '19:30',
 		place : 'Salón 1',
-		subjects : [],
+		subjects : [
+			'G Suite'
+		],
 		tba : '0'
 	},
 		{
@@ -225,13 +235,15 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'TBA',
+		name : 'Aplicaciones empresariales con Jakarta EE y Kotlin',
 		description : 'TBA',
 		speaker : 'Víctor Orozco',
 		day : '30',
 		time : '20:10',
 		place : 'Salón 2',
-		subjects : [],
+		subjects : [
+			'Kotlin'
+		],
 		tba : '0'
 	},
 	{
@@ -305,7 +317,7 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'TBA',
+		name : 'El papel de la Inteligencia Artificial en la actualidad',
 		description : 'TBA',
 		speaker : 'Evelin Juarez',
 		day : '31',
@@ -318,34 +330,38 @@ var events = [
 	},
 
 	{
-		name : 'TBA',
+		name : 'Mapeando el ecosistema emprendedor',
 		description : 'TBA',
-		speaker : 'Pablo Villanueva',
+		speaker : 'Ximena Orjuela',
 		day : '31',
 		time : '10:30',
 		place : 'Salón 1',
-		subjects : [],
+		subjects : [
+			'Innovación'
+		],
 		tba : '0'
 	},
 	{
-		name : 'TBA',
-		description : 'TBA',
-		speaker : 'Jorge Cajas',
+		name : 'Vida más allá de Android, extiende tu mundo con IoT',
+		description : 'Vivimos en un mundo cada vez más conectado, en esta sesión hablaremos sobre los fundamentos del internet de las cosas, dispositivos que podemos utilizar, y cómo empezar un proyecto.',
+		speaker : 'Sandy Mérida',
 		day : '31',
 		time : '10:30',
 		place : 'Salón 2',
-		subjects : [],
+		subjects : [
+			'IoT', 'Android'
+		],
 		tba : '0'
 	},
 	{
-		name : 'RISC-V',
+		name : 'Creación de un sitio web con Wordpress',
 		description : 'TBA',
-		speaker : 'Andrés Castellanos',
+		speaker : 'Frank Calderón',
 		day : '31',
 		time : '10:30',
 		place : 'Salón 3',
 		subjects : [
-			'Microprocesadores'
+			'Web'
 		],
 		tba : '0'
 	},
@@ -363,23 +379,27 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'TBA',
-		description : 'TBA',
-		speaker : 'TBA',
-		day : '31',
-		time : '11:45',
-		place : 'Salón 2',
-		subjects : [],
-		tba : '0'
-	},
-	{
-		name : 'TBA',
+		name : 'Mi nube ve mejor que la tuya',
 		description : 'TBA',
 		speaker : 'Adriana Moya',
 		day : '31',
 		time : '11:45',
+		place : 'Salón 2',
+		subjects : [
+			'Google Cloud', 'Inteligencia Artificial'
+		],
+		tba : '0'
+	},
+	{
+		name : 'Las 5 cosas que debes saber sobre el desarrollo de aplicaciones',
+		description : 'En esta charla aprenderás a diferenciar cuándo un desarrollo a la medida es apropiado, cuáles son las frameworks modernas más utilizadas, qué es una base de datos y cuándo debes utilizar una, qué es la nube y qué pasa si está soleado, y finalmente cómo puedes utilizar Machine Learning en tu siguiente aplicación.',
+		speaker : 'Pablo Villanueva',
+		day : '31',
+		time : '11:45',
 		place : 'Salón 3',
-		subjects : [],
+		subjects : [
+			'Inteligencia Artificial', 'Android'
+		],
 		tba : '0'
 	},
 
@@ -431,14 +451,14 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'AutoML',
+		name : 'Innovación Social',
 		description : 'TBA',
-		speaker : 'Pablo Villanueva',
+		speaker : 'Kenza Zouaoui',
 		day : '31',
 		time : '18:30',
 		place : 'Salón 2',
 		subjects : [
-			'Inteligencia Artificial'
+			'Innovación'
 		],
 		tba : '0'
 	},
@@ -456,14 +476,14 @@ var events = [
 	},
 
 	{
-		name : 'Design Thinking - metodologías y prácticas para innovar',
-		description : 'Taller introductorio y creativo para entender Design Thinking y descubrir herramientas para identificar retos y desarrollar soluciones innovadoras',
-		speaker : 'Kenza Zouaoui',
+		name : '¿Qué es Cloud Run y por qué lo debes de empezar a usar hoy?',
+		description : '¿Has logrado migrar a microservicios pero la carga de administración se lleva la mayor parte de tu tiempo? En esta charla aprenderás cómo puedes crear y desplegar contenedores en segundos, sin esfuerzo, y utilizando prácticas recomendadas por Google.',
+		speaker : 'Pablo Villanueva',
 		day : '31',
 		time : '19:30',
 		place : 'Salón 1',
 		subjects : [
-			'Design Thinking'
+			'Google Cloud'
 		],
 		tba : '0'
 	},
@@ -517,8 +537,8 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'TBA',
-		description : 'TBA',
+		name : 'Hackeando Aplicaciones Android',
+		description : 'Aclarar el desconocimiento que existe sobre algunas malas prácticas de programación y de cómo un atacante podría aprovecharse de ello para comprometer la organización. Se mostrará de manera práctica las distintas técnicas y herramientas a utilizar para llevar a cabo dichos ataques como parte de un test de intrusión.',
 		speaker : 'César Calderón',
 		day : '31',
 		time : '20:10',
