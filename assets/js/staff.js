@@ -1,7 +1,7 @@
 var staff = [
          {
         name: 'Yolanda López',
-        information: 'Ingeniera de Software enfocada en temas de infraestructura, desarrollo herramientas que optimizan y automatizan los procesos de CI / CD, entusiasta  de Cloud computing y la cultura DevOps. Actualmente Lider de la comunidad de AWS Guatemala y DevOps Guatemala junto a otros entusiastas de estos temas.',
+        information: 'Ingeniera de Software enfocada en temas de infraestructura, desarrollo herramientas que optimizan y automatizan los procesos de CI / CD. Actualmente Lider de la comunidad de AWS Guatemala y DevOps Guatemala.',
         image: 'yolanda lopez.jpeg',
         email: '-',
         company: '-',
@@ -9,7 +9,7 @@ var staff = [
     },
      {
         name: 'José Antonio Bagur',
-        information: 'Guatemalteco, quetzalteco y maker de nacimiento. Trabajo como docente e investigador en la Universidad del Valle de Guatemala, una de las universidades privadas más importantes de la región centroamericana. Mi pasión es el diseño de hardware electrónico, conectar cosas al internet y el espacio.',
+        information: 'Guatemalteco, quetzalteco y maker de nacimiento. Trabajo como docente e investigador en la Universidad del Valle de Guatemala. Mi pasión es el diseño de hardware electrónico, conectar cosas al internet y el espacio.',
         image: 'Bagur.jpg',
         email: '-',
         company: 'Universidad del Valle de Guatemala',
