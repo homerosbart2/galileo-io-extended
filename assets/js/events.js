@@ -137,7 +137,7 @@ var events = [
 	{
 		name : 'Investigación e innovación en el área de la Inteligencia Artificial',
 		description : 'TBA',
-		speaker : 'Bitzel Enríquez',
+		speaker : 'Bitzel Cortez',
 		day : '30',
 		time : '12:30',
 		place : 'Salón 3',
