@@ -929,19 +929,21 @@ nav {
     display: flex;
     font-weight: 500;
     padding-bottom: 12px;
-    align-items: flex-end; }
+    align-items: center; }
     .events-container .time-selection .time-selector {
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       transition: 0.3s ease;
       cursor: pointer;
       margin-right: 20px;
       padding: 5px 10px;
       border-radius: 18px;
-      color: #E94235; }
+      color: #FAD2CF; }
+      .events-container .time-selection .time-selector i {
+        margin-right: 6px; }
       .events-container .time-selection .time-selector.selected {
         cursor: default;
-        transform: scale(1.4); }
+        color: #E94235; }
   .events-container .day-card {
     display: none; }
     .events-container .day-card.shown {
