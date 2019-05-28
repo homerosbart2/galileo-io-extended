@@ -98,8 +98,6 @@
     var isCarouselOn = false;
     var inExpanded = false;
     var orderStaff = new Array();
-    var separationCount = 0;
-    var night = false;
 
     var logos = ['assets/img/gdg.png', 'assets/img/maya.png', 'assets/img/logo2stroke.PNG', 'assets/img/galileo-logostroke.PNG', 'assets/img/wtm.png'];
 
@@ -134,6 +132,8 @@
 
     function generateAgenda(){
         var actualDay = 1;
+        var separationCount = 0;
+        var night = false;
         var element = $('#dynamic-information');
 
         var html = "";
@@ -162,7 +162,7 @@
         html += 'Jueves 30'
         html += '</span>';
         html += '<span n="2" class="day-selector">';
-        html += 'Vierenes 31'
+        html += 'Viernes 31'
         html += '</span>';
         html += '</span>';
 
