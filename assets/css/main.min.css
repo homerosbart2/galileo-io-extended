@@ -919,10 +919,10 @@ nav {
       margin-right: 20px;
       padding: 5px 10px;
       border-radius: 18px;
-      color: #E94235; }
+      color: #4285f4; }
       .events-container .day-selection .day-selector.selected {
         cursor: default;
-        background: #E94235;
+        background: #4285f4;
         color: white; }
   .events-container .time-selection {
     margin: 0 22px;
@@ -938,12 +938,12 @@ nav {
       margin-right: 20px;
       padding: 5px 10px;
       border-radius: 18px;
-      color: #FAD2CF; }
+      color: #AECBFA; }
       .events-container .time-selection .time-selector i {
         margin-right: 6px; }
       .events-container .time-selection .time-selector.selected {
         cursor: default;
-        color: #E94235; }
+        color: #4285f4; }
   .events-container .day-card {
     display: none; }
     .events-container .day-card.shown {
@@ -1297,7 +1297,7 @@ nav {
 .agenda-container p {
   padding: 5px 10px !important;
   margin: 0 22px !important;
-  background: #FAD2CF; }
+  background: #AECBFA; }
 
 .agenda-container .events-container {
   margin-top: 30px; }
