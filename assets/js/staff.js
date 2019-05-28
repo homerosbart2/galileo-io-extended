@@ -209,7 +209,7 @@ var staff = [
          {
                   name : 'Frank Calderón',
                   information : 'Desarrollador Full Stack, emprendedor y educador. Co-fundador de la Comunidad de WordPress Guatemala, con 10 años de experiencia en Desarrollo Web y 8 años utilizando WordPress.',
-                  image : 'FrankCalderon.jpeg',
+                  image : 'FrankCalderon.png',
                   email : '',
                   company : '',
                   nationality : 'guatemala'
@@ -217,7 +217,7 @@ var staff = [
          {
                   name : 'Bitzel Cortez',
                   information : 'Bitzel Cortez cuenta con una maestría en inteligencia artificial por la universidad de Kyung Hee en Corea del Sur. Actualmente se desempeña como data scientist en una empresa del sector BPO en Guatemala. Su area de investigación es la aplicacion de la IA y machine learning para la prevención de accidentes.',
-                  image : 'BitzelCortez.jpeg',
+                  image : 'BitzelCortez.png',
                   email : '',
                   company : '',
                   nationality : 'guatemala'
