@@ -908,6 +908,48 @@ nav {
   display: flex;
   width: 100%;
   flex-direction: column; }
+  .events-container .day-selection {
+    margin: 0 22px;
+    display: flex;
+    width: 100%;
+    font-weight: 500;
+    padding-bottom: 12px; }
+    .events-container .day-selection .day-selector {
+      transition: 0.3s ease;
+      cursor: pointer;
+      margin-right: 20px;
+      padding: 5px 10px;
+      border-radius: 18px;
+      color: #E94235; }
+      .events-container .day-selection .day-selector.selected {
+        cursor: default;
+        background: #E94235;
+        color: white; }
+  .events-container .time-selection {
+    margin: 0 22px;
+    display: flex;
+    width: 100%;
+    font-weight: 500;
+    padding-bottom: 12px;
+    align-items: flex-end; }
+    .events-container .time-selection .time-selector {
+      display: flex;
+      align-items: flex-end;
+      transition: 0.3s ease;
+      cursor: pointer;
+      margin-right: 20px;
+      padding: 5px 10px;
+      border-radius: 18px;
+      color: #E94235; }
+      .events-container .time-selection .time-selector.selected {
+        cursor: default;
+        transform: scale(1.4); }
+  .events-container .day-card {
+    display: none; }
+    .events-container .day-card.shown {
+      display: flex;
+      width: 100%;
+      flex-direction: column; }
   .events-container .event-date {
     padding: 6px 6px 0 6px;
     margin: 0 16px;
@@ -917,17 +959,22 @@ nav {
       .events-container .event-date {
         font-size: 18px; } }
   .events-container .event-card {
-    display: flex;
+    display: none;
     flex-direction: row;
     padding: 6px;
-    margin-right: 22px; }
+    margin-right: 22px;
+    align-items: center; }
+    .events-container .event-card.shown {
+      display: flex; }
     .events-container .event-card .event-time {
       min-width: 38px;
       display: flex;
       flex-direction: column;
       align-items: center;
       color: gray;
-      margin: 0 16px; }
+      margin: 0 16px;
+      padding: 0 3px;
+      height: 44px; }
       .events-container .event-card .event-time .time {
         font-size: 15px; }
       .events-container .event-card .event-time .m {
@@ -937,6 +984,23 @@ nav {
           font-size: 13px; }
         .events-container .event-card .event-time .m {
           font-size: 11px; } }
+    .events-container .event-card .staff-image {
+      margin-right: 16px;
+      position: relative;
+      border-radius: 100%;
+      overflow: hidden;
+      display: flex;
+      width: 40px;
+      height: 40px;
+      transition: 0.3s ease;
+      opacity: 1;
+      transition: 0.3s ease; }
+      .events-container .event-card .staff-image .img {
+        transition: 0.3s ease;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        filter: blur(0) brightness(1); }
     .events-container .event-card .event-information .event-title {
       font-weight: bold;
       display: flex;
