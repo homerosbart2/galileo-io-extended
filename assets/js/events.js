@@ -124,7 +124,7 @@ var events = [
 	},
 	{
 		name : 'Firebase en el mundo del Internet de las Cosas',
-		description : '',
+		description : 'Vamos a aprender a utilizar Firebase para poder crear nuestra plataforma de Internet de las Cosas con notificaciones en tiempo real y almacenamiento casi gratuito.',
 		speaker : 'Yeffri Salazar',
 		day : '30',
 		time : '12:30',
@@ -272,7 +272,7 @@ var events = [
 	{
 		name : 'Construyendo un satélite a lo Maker',
 		description : '¿Se pueden construir satélites con componentes comunes y corrientes?',
-		speaker : 'José Bagur',
+		speaker : 'José Antonio Bagur',
 		day : '31',
 		time : '09:00',
 		place : '511 - Torre 1',
@@ -319,7 +319,7 @@ var events = [
 	{
 		name : 'El papel de la Inteligencia Artificial en la actualidad',
 		description : '',
-		speaker : 'Evelin Juarez',
+		speaker : 'Evelin Juárez',
 		day : '31',
 		time : '09:45',
 		place : 'Anexo Cafetería AC07',
