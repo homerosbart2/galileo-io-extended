@@ -1,4 +1,20 @@
 var staff = [
+          {
+        name: 'Ximena Orjuela',
+        information: 'Publicista, Relacionista Pública. Cuenta con varios años de experiencia en el sector de las comunicaciones, organización y ejecución de programas de emprendimiento, corporativos y tecnología a nivel Latam.',
+        image: 'Ximena Orjuela.jpeg',
+        email: '-',
+        company: 'UCB en Cochabamba',
+        nationality: 'colombia'
+    },
+         {
+        name: 'Lesly Zerna',
+        information: 'Educadora en tecnología, le apasiona enseñar y aprender. Es ingeniera en telecomunicaciones y tiene un master en ciencias de computación, actualmente es docente de la UCB en Cochabamba y activista en temas de seguridad informática y promueve la participación de más mujeres en tecnologías con el programa Mentor Her.',
+        image: 'Lesly zerna.jpeg',
+        email: '-',
+        company: 'UCB en Cochabamba',
+        nationality: 'bolivia'
+    },
          {
         name: 'Evelin Juárez',
         information: 'Soy administrador de base de datos y Desarrollador Java. Actualmente trabajo de Analista en Cervecería Centroamericana. Mi Objetivo es Incentivar a personas en el Aprendizaje y Desarrollo de nuevas tecnologías.',
