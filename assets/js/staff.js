@@ -4,7 +4,7 @@ var staff = [
         information: 'Publicista, Relacionista Pública. Cuenta con varios años de experiencia en el sector de las comunicaciones, organización y ejecución de programas de emprendimiento, corporativos y tecnología a nivel Latam.',
         image: 'Ximena Orjuela.jpeg',
         email: '-',
-        company: 'UCB en Cochabamba',
+        company: '-',
         nationality: 'colombia'
     },
          {
