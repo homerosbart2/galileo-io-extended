@@ -961,12 +961,12 @@ nav {
   .events-container .event-card {
     display: none;
     flex-direction: row;
-    padding: 6px;
     margin-right: 22px;
-    align-items: center; }
+    align-items: flex-start; }
     .events-container .event-card.shown {
       display: flex; }
     .events-container .event-card .event-time {
+      padding-top: 16px;
       min-width: 38px;
       display: flex;
       flex-direction: column;
@@ -982,41 +982,55 @@ nav {
           font-size: 13px; }
         .events-container .event-card .event-time .m {
           font-size: 11px; } }
-    .events-container .event-card .staff-image {
-      margin-right: 16px;
-      position: relative;
-      border-radius: 100%;
-      overflow: hidden;
+    .events-container .event-card .event-information {
       display: flex;
-      width: 40px;
-      height: 40px;
-      transition: 0.3s ease;
-      opacity: 1;
-      transition: 0.3s ease; }
-      .events-container .event-card .staff-image .img {
-        transition: 0.3s ease;
-        width: 100%;
-        height: auto;
-        position: absolute;
-        filter: blur(0) brightness(1); }
-    .events-container .event-card .event-information .event-title {
-      font-weight: bold;
-      display: flex;
-      width: 100%; }
-    .events-container .event-card .event-information .subjects-container .event-ubication {
-      margin-right: 24px; }
-      .events-container .event-card .event-information .subjects-container .event-ubication i {
-        margin-right: 6px;
-        font-size: 12px; }
-    .events-container .event-card .event-information .subjects-container .event-subject {
-      margin-right: 12px; }
-      .events-container .event-card .event-information .subjects-container .event-subject i {
-        margin-right: 6px;
-        font-size: 10px;
-        color: gray; }
-    @media only screen and (max-width: 650px) {
-      .events-container .event-card .event-information {
-        font-size: 12px; } }
+      width: 100%;
+      flex-direction: column;
+      padding: 16px; }
+      .events-container .event-card .event-information .event-title {
+        font-weight: bold;
+        display: flex;
+        width: 100%; }
+      .events-container .event-card .event-information .subjects-container .event-ubication {
+        margin-right: 24px; }
+        .events-container .event-card .event-information .subjects-container .event-ubication i {
+          margin-right: 6px;
+          font-size: 12px; }
+      .events-container .event-card .event-information .subjects-container .event-subject {
+        margin-right: 12px; }
+        .events-container .event-card .event-information .subjects-container .event-subject i {
+          margin-right: 6px;
+          font-size: 10px;
+          color: gray; }
+      .events-container .event-card .event-information .event-speaker {
+        display: flex;
+        align-items: center;
+        margin-top: 3px; }
+        .events-container .event-card .event-information .event-speaker .staff-image {
+          margin-right: 12px;
+          position: relative;
+          border-radius: 100%;
+          overflow: hidden;
+          display: flex;
+          width: 40px;
+          height: 40px;
+          transition: 0.3s ease;
+          opacity: 1;
+          transition: 0.3s ease; }
+          .events-container .event-card .event-information .event-speaker .staff-image .img {
+            transition: 0.3s ease;
+            width: 100%;
+            height: auto;
+            position: absolute; }
+        .events-container .event-card .event-information .event-speaker .staff-name {
+          display: flex;
+          flex-direction: column; }
+          .events-container .event-card .event-information .event-speaker .staff-name .staff-expand {
+            color: #4285f4;
+            font-weight: bold; }
+      @media only screen and (max-width: 650px) {
+        .events-container .event-card .event-information {
+          font-size: 12px; } }
 
 .workshops-container {
   margin-top: 25px;
