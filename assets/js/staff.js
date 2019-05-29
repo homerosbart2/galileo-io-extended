@@ -80,7 +80,7 @@ var staff = [
         company: 'Universidad Galileo'
     },
     {
-        name: 'Herberth Obregón ',
+        name: 'Herberth Obregón',
         information: 'Soy CTO de Conectate Today, plataforma que ayuda a la difusión y generación de empleo, soy apasionado a las tecnologías de Google.',
         image: 'Herberth.png',
         nationality: 'guatemala',
