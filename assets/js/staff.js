@@ -1,5 +1,13 @@
 var staff = [
          {
+        name: 'Evelin Juárez',
+        information: 'Soy administrador de base de datos y Desarrollador Java. Actualmente trabajo de Analista en Cervecería Centroamericana. Mi Objetivo es Incentivar a personas en el Aprendizaje y Desarrollo de nuevas tecnologías.',
+        image: 'Evelin J.png',
+        email: '-',
+        company: 'Cervecería Centroamericana',
+        nationality: 'guatemala'
+    },
+         {
         name: 'Yolanda López',
         information: 'Ingeniera de Software enfocada en temas de infraestructura, desarrollo herramientas que optimizan y automatizan los procesos de CI / CD. Actualmente Lider de la comunidad de AWS Guatemala y DevOps Guatemala.',
         image: 'yolanda lopez.jpeg',
