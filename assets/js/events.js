@@ -5,7 +5,7 @@ var events = [
 		speaker : 'Andrea Lara',
 		day: '30',
 		time: '09:45',
-		place: 'Salón 1',
+		place: '401 - Torre 1',
 		subjects: [
 			'Biomédica'
 		],
@@ -13,11 +13,11 @@ var events = [
 	},
 	{
 		name : 'TBA',
-		description : 'TBA',
+		description : '',
 		speaker : 'Ángel Chanquín',
 		day : '30',
 		time : '09:45',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Google Cloud', 'App Engine'
 		],
@@ -29,7 +29,7 @@ var events = [
 		speaker : 'Norman Vicente',
 		day: '30',
 		time: '09:45',
-		place: 'Salón 3',
+		place: 'Anexo Cafetería AC07',
 		subjects: [
 			'DialogFlow', 'Messenger'
 		],
@@ -42,7 +42,7 @@ var events = [
 		speaker : 'Juan Ñahui',
 		day: '30',
 		time: '10:30',
-		place: 'Salón 1',
+		place: '401 - Torre 1',
 		subjects: [
 			'Inteligencia Artificial'
 		],
@@ -54,7 +54,7 @@ var events = [
 		speaker : 'Jorge Cajas',
 		day : '30',
 		time : '10:30',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Seguridad Informática'
 		],
@@ -66,7 +66,7 @@ var events = [
 		speaker : 'Henry Campos',
 		day : '30',
 		time : '10:30',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [
 			'Flutter'
 		],
@@ -75,11 +75,11 @@ var events = [
 
 	{
 		name : 'Innovación como catalizador de desarrollo',
-		description : 'TBA',
+		description : '',
 		speaker : 'Manolo Guerrero',
 		day : '30',
 		time : '11:45',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Innovación'
 		],
@@ -91,7 +91,7 @@ var events = [
 		speaker : 'Katherine Chauca',
 		day : '30',
 		time : '11:45',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Google Apps Script'
 		],
@@ -99,11 +99,11 @@ var events = [
 	},
 	{
 		name : 'TBA',
-		description : 'TBA',
+		description : '',
 		speaker : 'Hansy Schmitt',
 		day : '30',
 		time : '11:45',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [
 			'Flutter'
 		],
@@ -112,11 +112,11 @@ var events = [
 
 	{
 		name : 'Hey Google! Conociendo el asistente virtual de Google',
-		description : 'TBA',
+		description : '',
 		speaker : 'Carlo Huamán',
 		day : '30',
 		time : '12:30',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Google Assistant'
 		],
@@ -124,11 +124,11 @@ var events = [
 	},
 	{
 		name : 'Firebase en el mundo del Internet de las Cosas',
-		description : 'TBA',
+		description : '',
 		speaker : 'Yeffri Salazar',
 		day : '30',
 		time : '12:30',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'IoT', 'Firebase'
 		],
@@ -136,11 +136,11 @@ var events = [
 	},
 	{
 		name : 'Investigación e innovación en el área de la Inteligencia Artificial',
-		description : 'TBA',
+		description : '',
 		speaker : 'Bitzel Cortez',
 		day : '30',
 		time : '12:30',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [
 			'Inteligencia Artificial'
 		],
@@ -153,7 +153,7 @@ var events = [
 		speaker : 'Isabel Palomar',
 		day : '30',
 		time : '18:30',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Inteligencia Artificial', 'Tensorflow', 'Firebase'
 		],
@@ -161,11 +161,11 @@ var events = [
 	},
 		{
 		name : 'Progressive Web Apps, the new trend to create Apps',
-		description : 'TBA',
+		description : '',
 		speaker : 'Walter Cordero',
 		day : '30',
 		time : '18:30',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'PWA'
 		],
@@ -177,7 +177,7 @@ var events = [
 		speaker : 'Carlo Huamán',
 		day : '30',
 		time : '18:30',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [
 			'Serverless', 'Google Cloud'
 		],
@@ -191,7 +191,7 @@ var events = [
 		speaker : 'Katherine Chauca',
 		day : '30',
 		time : '19:30',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'G Suite'
 		],
@@ -203,7 +203,7 @@ var events = [
 		speaker : 'Diego Velásquez',
 		day : '30',
 		time : '19:30',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Flutter'
 		],
@@ -215,7 +215,7 @@ var events = [
 		speaker : 'Diego Ramírez',
 		day : '30', 
 		time : '19:30',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [
 			'Kotlin'
 		],
@@ -224,11 +224,11 @@ var events = [
 
 	{
 		name : 'Diseño responsivo en Flutter',
-		description : 'TBA',
+		description : '',
 		speaker : 'Hansy Schmitt',
 		day : '30',
 		time : '20:10',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Flutter'
 		],
@@ -236,11 +236,11 @@ var events = [
 	},
 	{
 		name : 'Aplicaciones empresariales con Jakarta EE y Kotlin',
-		description : 'TBA',
+		description : '',
 		speaker : 'Víctor Orozco',
 		day : '30',
 		time : '20:10',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Kotlin'
 		],
@@ -252,7 +252,7 @@ var events = [
 		speaker : 'Herberth Obregón',
 		day : '30',
 		time : '20:10',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [],
 		tba : '0'
 	},
@@ -263,7 +263,7 @@ var events = [
 		speaker : 'Kenza Zouaoui',
 		day : '31',
 		time : '09:00',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Design Thinking'
 		],
@@ -275,7 +275,7 @@ var events = [
 		speaker : 'José Bagur',
 		day : '31',
 		time : '09:00',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Maker'
 		],
@@ -283,11 +283,11 @@ var events = [
 	},
 	{
 		name : 'Resolución de problemas a través de la Ingeniería',
-		description : 'TBA',
+		description : '',
 		speaker : 'Walter Cordero',
 		day : '31',
 		time : '09:00',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [],
 		tba : '0'
 	},
@@ -298,7 +298,7 @@ var events = [
 		speaker : 'Kenza Zouaoui',
 		day : '31',
 		time : '09:45',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Design Thinking'
 		],
@@ -306,11 +306,11 @@ var events = [
 	},
 	{
 		name : 'Inteligencia Artificial para Android',
-		description : 'TBA',
+		description : '',
 		speaker : 'Isabel Palomar',
 		day : '31',
 		time : '09:45',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Inteligencia Artificial', 'Android'
 		],
@@ -318,11 +318,11 @@ var events = [
 	},
 	{
 		name : 'El papel de la Inteligencia Artificial en la actualidad',
-		description : 'TBA',
+		description : '',
 		speaker : 'Evelin Juarez',
 		day : '31',
 		time : '09:45',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [
 			'Inteligencia Artificial'
 		],
@@ -331,11 +331,11 @@ var events = [
 
 	{
 		name : 'Mapeando el ecosistema emprendedor',
-		description : 'TBA',
+		description : '',
 		speaker : 'Ximena Orjuela',
 		day : '31',
 		time : '10:30',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Innovación'
 		],
@@ -347,7 +347,7 @@ var events = [
 		speaker : 'Sandy Mérida',
 		day : '31',
 		time : '10:30',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'IoT', 'Android'
 		],
@@ -355,11 +355,11 @@ var events = [
 	},
 	{
 		name : 'Creación de un sitio web con Wordpress',
-		description : 'TBA',
+		description : '',
 		speaker : 'Frank Calderón',
 		day : '31',
 		time : '10:30',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [
 			'Web'
 		],
@@ -372,7 +372,7 @@ var events = [
 		speaker : 'Diego Coy',
 		day : '31',
 		time : '11:45',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Web'
 		],
@@ -380,11 +380,11 @@ var events = [
 	},
 	{
 		name : 'Mi nube ve mejor que la tuya',
-		description : 'TBA',
+		description : '',
 		speaker : 'Adriana Moya',
 		day : '31',
 		time : '11:45',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Google Cloud', 'Inteligencia Artificial'
 		],
@@ -396,7 +396,7 @@ var events = [
 		speaker : 'Pablo Villanueva',
 		day : '31',
 		time : '11:45',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [
 			'Inteligencia Artificial', 'Android'
 		],
@@ -405,11 +405,11 @@ var events = [
 
 	{
 		name : 'Como hackear al mundo',
-		description : 'TBA',
+		description : '',
 		speaker : 'Diego Ramírez',
 		day : '31',
 		time : '12:30',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [],
 		tba : '0'
 	},
@@ -419,7 +419,7 @@ var events = [
 		speaker : 'Andrés Castellanos',
 		day : '31',
 		time : '12:30',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Inteligencia Artificial'
 		],
@@ -427,11 +427,11 @@ var events = [
 	},
 	{
 		name : 'Predicción de series de tiempo con redes neuronales artificiales',
-		description : 'TBA',
+		description : '',
 		speaker : 'Víctor Peñaloza',
 		day : '31',
 		time : '12:30',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [
 			'Inteligencia Artificial'
 		],
@@ -444,7 +444,7 @@ var events = [
 		speaker : 'Adriana Moya',
 		day : '31',
 		time : '18:30',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Google Cloud', 'Serverless'
 		],
@@ -452,11 +452,11 @@ var events = [
 	},
 	{
 		name : 'Innovación Social',
-		description : 'TBA',
+		description : '',
 		speaker : 'Kenza Zouaoui',
 		day : '31',
 		time : '18:30',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Innovación'
 		],
@@ -468,7 +468,7 @@ var events = [
 		speaker : 'Juan Ñahui',
 		day: '31',
 		time: '18:30',
-		place: 'Salón 3',
+		place: 'Anexo Cafetería AC07',
 		subjects: [
 			'Inteligencia Artificial'
 		],
@@ -481,7 +481,7 @@ var events = [
 		speaker : 'Pablo Villanueva',
 		day : '31',
 		time : '19:30',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Google Cloud'
 		],
@@ -493,7 +493,7 @@ var events = [
 		speaker : 'Ceci Castillo',
 		day : '31',
 		time : '19:30',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Android'
 		],
@@ -505,7 +505,7 @@ var events = [
 		speaker : 'Yolanda López',
 		day : '31',
 		time : '19:30',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [
 			'Google Cloud'
 		],
@@ -514,11 +514,11 @@ var events = [
 	
 	{
 		name : 'Flutter para desarrolladores',
-		description : 'TBA',
+		description : '',
 		speaker : 'Diego Velásquez',
 		day : '31',
 		time : '20:10',
-		place : 'Salón 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Flutter'
 		],
@@ -526,11 +526,11 @@ var events = [
 	},
 	{
 		name : 'Revelando los super poderes secretos de la web',
-		description : 'TBA',
+		description : '',
 		speaker : 'Diego Coy',
 		day : '31',
 		time : '20:10',
-		place : 'Salón 2',
+		place : '511 - Torre 1',
 		subjects : [
 			'Web'
 		],
@@ -542,7 +542,7 @@ var events = [
 		speaker : 'César Calderón',
 		day : '31',
 		time : '20:10',
-		place : 'Salón 3',
+		place : 'Anexo Cafetería AC07',
 		subjects : [],
 		tba : '0'
 	}
