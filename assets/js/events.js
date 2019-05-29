@@ -223,24 +223,12 @@ var events = [
 	},
 
 	{
-		name : 'Diseño responsivo en Flutter',
-		description : '',
-		speaker : 'Hansy Schmitt',
-		day : '30',
-		time : '20:10',
-		place : '401 - Torre 1',
-		subjects : [
-			'Flutter'
-		],
-		tba : '0'
-	},
-	{
 		name : 'Aplicaciones empresariales con Jakarta EE y Kotlin',
 		description : '',
 		speaker : 'Víctor Orozco',
 		day : '30',
 		time : '20:10',
-		place : '511 - Torre 1',
+		place : '401 - Torre 1',
 		subjects : [
 			'Kotlin'
 		],
@@ -252,8 +240,20 @@ var events = [
 		speaker : 'Herberth Obregón',
 		day : '30',
 		time : '20:10',
-		place : 'Anexo Cafetería AC07',
+		place : '511 - Torre 1',
 		subjects : [],
+		tba : '0'
+	},
+		{
+		name : 'Diseño responsivo en Flutter',
+		description : '',
+		speaker : 'Hansy Schmitt',
+		day : '30',
+		time : '20:10',
+		place : 'Anexo Cafetería AC07',
+		subjects : [
+			'Flutter'
+		],
 		tba : '0'
 	},
 
@@ -330,7 +330,7 @@ var events = [
 	},
 
 	{
-		name : 'Mapeando el ecosistema emprendedor',
+		name : 'PR en la era de las Startups',
 		description : '',
 		speaker : 'Ximena Orjuela',
 		day : '31',
