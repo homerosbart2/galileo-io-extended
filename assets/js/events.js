@@ -12,7 +12,7 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'TBA',
+		name : 'Introducción a Google Cloud y App Engine',
 		description : '',
 		speaker : 'Ángel Chanquín',
 		day : '30',
@@ -61,14 +61,14 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'Primeros pasos con Flutter',
-		description : 'Aprende sobre como empezar a trabajar con Flutter, el framework de desarrollo multiplataforma de Google.',
-		speaker : 'Henry Campos',
+		name : 'Gestión Ágil de Proyectos de Tecnología',
+		description : '',
+		speaker : 'Melvin García',
 		day : '30',
 		time : '10:30',
 		place : 'Anexo Cafetería AC07',
 		subjects : [
-			'Flutter'
+			'Innovación'
 		],
 		tba : '0'
 	},
@@ -98,7 +98,7 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'TBA',
+		name : 'Como dar tus primeros pasos en Flutter',
 		description : '',
 		speaker : 'Hansy Schmitt',
 		day : '30',
