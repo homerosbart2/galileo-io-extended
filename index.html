@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="assets/js/staff.js" type="text/javascript"></script>
     <script src="assets/js/events.js" type="text/javascript"></script>
+    <script src="assets/js/subjects.js" type="text/javascript"></script>
     
 
 
@@ -249,7 +250,8 @@
                 html += event.place;
                 html += '</span>';
                 event.subjects.forEach((subject)=>{
-                    html += '<span class="event-subject"><i class="fas fa-circle"></i>';
+                    html += '<span class="event-subject">';
+                    html += (subjects[subject] == null)?  '<i style="color: gray;" class="fas fa-circle"></i>' : `<i style="color: #${subjects[subject]};" class="fas fa-circle"></i>`;
                     html += subject;
                     html += '</span>';
                 });
