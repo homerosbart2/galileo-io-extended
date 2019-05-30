@@ -256,14 +256,16 @@ var events = [
 		tba : '0'
 	},
 		{
-		name : 'TBA',
-		description : '',
-		speaker : 'TBA',
+		name : 'La inteligencia artificial ya es parte de tu vida y debes aprender a usarla',
+		description : 'Enseñando a programar a niños descubrió nuevas formas de enseñar. Curso básico sobre inteligencia artificial animada.',
+		speaker : 'Juan Ñahui',
 		day : '30',
 		time : '20:10',
 		place : 'Anexo Cafetería, AC 07',
-		subjects : [],
-		tba : '1'
+		subjects : [
+			Inteligencia Artificial
+		],
+		tba : '0'
 	},
 
 	{
@@ -460,9 +462,9 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'Innovación Social',
+		name : 'Conociendo las redes neuronales artificiales con TensorFlow',
 		description : '',
-		speaker : 'Kenza Zouaoui',
+		speaker : 'Lesly Zerna',
 		day : '31',
 		time : '18:30',
 		place : '401 - Torre 1',
