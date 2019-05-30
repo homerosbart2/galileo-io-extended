@@ -263,7 +263,7 @@ var events = [
 		time : '20:10',
 		place : 'Anexo Cafetería, AC 07',
 		subjects : [
-			Inteligencia Artificial
+			'Inteligencia Artificial'
 		],
 		tba : '0'
 	},
