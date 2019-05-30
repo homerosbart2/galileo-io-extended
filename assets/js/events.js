@@ -1,5 +1,16 @@
 var events = [
 	{
+		name : 'Keynote - Charla inicial',
+		description : 'Charla introductoria al evento.',
+		speaker : '',
+		day : '30',
+		time : '9:00',
+		place : 'Jardín de Ceremonias',
+		subjects : [],
+		tba : '0'
+	},
+		
+	{
 		name : 'El Futuro y la Biomédica',
 		description : 'Dónde estamos y hacia dónde vamos en la tecnología médica y cómo esta ayudará a tener una mejor calidad de vida.',
 		speaker : 'Andrea Lara',
