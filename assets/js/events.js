@@ -109,16 +109,16 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'Como dar tus primeros pasos en Flutter',
+		name : 'Primeros pasos en Flutter',
 		description : '',
-		speaker : 'Hansy Schmitt',
+		speaker : 'Henry Campos',
 		day : '30',
 		time : '11:45',
 		place : '511 - Torre 1',
 		subjects : [
 			'Flutter'
 		],
-		tba : '1'
+		tba : '0'
 	},
 
 	{
