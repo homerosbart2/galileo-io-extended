@@ -7,6 +7,14 @@ var staff = [
         company: '-',
         nationality: 'colombia'
     },
+          {
+                    name : 'Víctor Peñaloza',
+                    information : 'Ingeniero en Sistemas y Ciencias de la Computación. Interés principal en el área de Machine Learning. Investigador y catedrático en la Universidad Galileo. Trabajando actualmente en la aplicación de modelos de Deep Learning para el pronóstico de trayectorias en ambientes con múltiples agentes.',
+                    image : 'VictorPenaloza.jpg',
+                    email : '-',
+                    company : 'Universidad Galileo',
+                    nationality : 'guatemala'
+          },
          {
         name: 'Lesly Zerna',
         information: 'Educadora en tecnología, le apasiona enseñar y aprender. Es ingeniera en telecomunicaciones y tiene un master en ciencias de computación, actualmente es docente de la UCB en Cochabamba y activista en temas de seguridad informática y promueve la participación de más mujeres en tecnologías con el programa Mentor Her.',
