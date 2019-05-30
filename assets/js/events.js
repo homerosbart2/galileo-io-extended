@@ -164,7 +164,7 @@ var events = [
 		speaker : 'Isabel Palomar',
 		day : '30',
 		time : '18:30',
-		place : 'Jardín de Ceremonias',
+		place : '401 - Torre 1',
 		subjects : [
 			'Inteligencia Artificial', 'Tensorflow', 'Firebase'
 		],
@@ -176,7 +176,7 @@ var events = [
 		speaker : 'Walter Cordero',
 		day : '30',
 		time : '18:30',
-		place : '401 - Torre 1',
+		place : '511 - Torre 1',
 		subjects : [
 			'PWA'
 		],
@@ -188,7 +188,7 @@ var events = [
 		speaker : 'Carlo Huamán',
 		day : '30',
 		time : '18:30',
-		place : '511 - Torre 1',
+		place : 'Anexo Cafetería, AC 07',
 		subjects : [
 			'Serverless', 'Google Cloud'
 		],
@@ -202,7 +202,7 @@ var events = [
 		speaker : 'Katherine Chauca',
 		day : '30',
 		time : '19:30',
-		place : 'Jardín de Ceremonias',
+		place : '401 - Torre 1',
 		subjects : [
 			'G Suite'
 		],
@@ -214,7 +214,7 @@ var events = [
 		speaker : 'Diego Velásquez',
 		day : '30',
 		time : '19:30',
-		place : '401 - Torre 1',
+		place : '511 - Torre 1',
 		subjects : [
 			'Flutter'
 		],
@@ -226,7 +226,7 @@ var events = [
 		speaker : 'Diego Ramírez',
 		day : '30', 
 		time : '19:30',
-		place : '511 - Torre 1',
+		place : 'Anexo Cafetería, AC 07',
 		subjects : [
 			'Kotlin'
 		],
@@ -239,7 +239,7 @@ var events = [
 		speaker : 'Víctor Orozco',
 		day : '30',
 		time : '20:10',
-		place : 'Jardín de Ceremonias',
+		place : '401 - Torre 1',
 		subjects : [
 			'Kotlin'
 		],
@@ -251,21 +251,19 @@ var events = [
 		speaker : 'Herberth Obregón',
 		day : '30',
 		time : '20:10',
-		place : '401 - Torre 1',
+		place : '511 - Torre 1',
 		subjects : [],
 		tba : '0'
 	},
 		{
-		name : 'Diseño responsivo en Flutter',
+		name : 'TBA',
 		description : '',
-		speaker : 'Hansy Schmitt',
+		speaker : 'TBA',
 		day : '30',
 		time : '20:10',
-		place : '511 - Torre 1',
-		subjects : [
-			'Flutter'
-		],
-		tba : '0'
+		place : 'Anexo Cafetería, AC 07',
+		subjects : [],
+		tba : '1'
 	},
 
 	{
