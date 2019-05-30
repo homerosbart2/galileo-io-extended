@@ -4,7 +4,7 @@ var events = [
 		description : 'Charla introductoria al evento.',
 		speaker : '',
 		day : '30',
-		time : '9:00',
+		time : '09:00',
 		place : 'Jardín de Ceremonias',
 		subjects : [],
 		tba : '0'
