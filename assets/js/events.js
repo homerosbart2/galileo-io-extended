@@ -176,7 +176,7 @@ var events = [
 		speaker : 'Walter Cordero',
 		day : '30',
 		time : '18:30',
-		place : '511 - Torre 1',
+		place : '502 - Torre 1',
 		subjects : [
 			'PWA'
 		],
@@ -214,7 +214,7 @@ var events = [
 		speaker : 'Diego Velásquez',
 		day : '30',
 		time : '19:30',
-		place : '511 - Torre 1',
+		place : '502 - Torre 1',
 		subjects : [
 			'Flutter'
 		],
@@ -251,7 +251,7 @@ var events = [
 		speaker : 'Herberth Obregón',
 		day : '30',
 		time : '20:10',
-		place : '511 - Torre 1',
+		place : '502 - Torre 1',
 		subjects : [],
 		tba : '0'
 	},
