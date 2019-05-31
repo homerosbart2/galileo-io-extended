@@ -487,7 +487,7 @@ var events = [
 		speaker: 'Adriana Moya',
 		day: '31',
 		time: '18:30',
-		place: 'Jardín de Ceremonias',
+		place: '401 - Torre 1',
 		subjects: [
 			'Google Cloud', 'Serverless'
 		],
@@ -499,7 +499,7 @@ var events = [
 		speaker: 'Lesly Zerna',
 		day: '31',
 		time: '18:30',
-		place: '401 - Torre 1',
+		place: '511 - Torre 1',
 		subjects: [
 			'Innovación'
 		],
@@ -511,7 +511,7 @@ var events = [
 		speaker: 'Juan Ñahui',
 		day: '31',
 		time: '18:30',
-		place: '511 - Torre 1',
+		place: 'Anexo Cafetería 07',
 		subjects: [
 			'Inteligencia Artificial'
 		],
@@ -523,7 +523,7 @@ var events = [
 		speaker: 'Pablo Villanueva',
 		day: '31',
 		time: '19:30',
-		place: 'Jardín de Ceremonias',
+		place: '401 - Torre 1',
 		subjects: [
 			'Google Cloud'
 		],
@@ -535,7 +535,7 @@ var events = [
 		speaker: 'Ceci Castillo',
 		day: '31',
 		time: '19:30',
-		place: '401 - Torre 1',
+		place: '511 - Torre 1',
 		subjects: [
 			'Android'
 		],
@@ -547,7 +547,7 @@ var events = [
 		speaker: 'Yolanda López',
 		day: '31',
 		time: '19:30',
-		place: '511 - Torre 1',
+		place: 'Anexo Cafetería 07',
 		subjects: [
 			'Google Cloud'
 		],
@@ -559,7 +559,7 @@ var events = [
 		speaker: 'Diego Velásquez',
 		day: '31',
 		time: '20:10',
-		place: 'Jardín de Ceremonias',
+		place: '401 - Torre 1',
 		subjects: [
 			'Flutter'
 		],
@@ -571,7 +571,7 @@ var events = [
 		speaker: 'Diego Coy',
 		day: '31',
 		time: '20:10',
-		place: '401 - Torre 1',
+		place: '511 - Torre 1',
 		subjects: [
 			'Web'
 		],
@@ -583,7 +583,7 @@ var events = [
 		speaker: 'César Calderón',
 		day: '31',
 		time: '20:10',
-		place: '511 - Torre 1',
+		place: 'Anexo Cafetería 07',
 		subjects: [],
 		tba: '0'
 	}
