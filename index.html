@@ -268,7 +268,7 @@
                 if(finded){
                     html += '<span class="event-speaker">';
                     html += '<span class="staff-image">';
-                    html += `<img class="img" img-path="assets/img/${speaker.image}" src="assets/img/${speaker.image}">`;
+                    html += (speaker.image == null)? '' : `<img class="img" img-path="assets/img/${speaker.image}" src="assets/img/${speaker.image}">`;
                     html += '</span>';
                     html += '<span class="staff-name">';
                     html += speaker.name;
@@ -429,7 +429,7 @@
 
         html += '<span class="staff-expanded-card">';
         html += '<span class="staff-image">';
-        html += `<img class="img" src="${img_path}">`;
+        html += (img_path == undefined)? '' : `<img class="img" src="${img_path}">`;
 
         if(gde[0] != undefined) html += '<span class="gde-banner"><span class="img-container"><img src="assets/img/gde.png"></span></span>';
 
@@ -539,7 +539,7 @@
             html += `<span class="staff-card ${element.job}">`;
             //html += `<img class="staff-bg" src="assets/img/${element.image}">`;
             html += '<span class="staff-image">';
-            html += `<img class="img" img-path="assets/img/${element.image}" src="">`;
+            html += (element.image == null)? '' : `<img class="img" img-path="assets/img/${element.image}" src="">`;
             if(element.gde != null){
                 html += '<span class="gde-banner"><span class="img-container"><img src="assets/img/gde.png"></span></span>';
             }
@@ -566,8 +566,8 @@
 
         element.find('.section-body').find('.staff-container').find('.staff-card').each((index, element) => {
             var actualImg = $(element).find('.staff-image');
-            
-            actualImg.find('.img')[0].onload = () => {
+
+            if(actualImg.find('.img')[0] != undefined) actualImg.find('.img')[0].onload = () => {
                 actualImg.css('opacity', '1');
                 actualImg.css('transform', 'scale(1)');
             }
