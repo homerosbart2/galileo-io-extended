@@ -513,7 +513,7 @@ var events = [
 		time: '18:30',
 		place: 'Anexo Cafetería 07',
 		subjects: [
-			'Inteligencia Artificial'
+			'Blockchain'
 		],
 		tba: '0'
 	},
