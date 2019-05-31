@@ -383,7 +383,7 @@ var events = [
 		speaker : 'Diego Coy',
 		day : '31',
 		time : '11:45',
-		place : 'Jardín de Ceremonias',
+		place : '401 - Torre 1',
 		subjects : [
 			'Web'
 		],
@@ -395,7 +395,7 @@ var events = [
 		speaker : 'Adriana Moya',
 		day : '31',
 		time : '11:45',
-		place : '401 - Torre 1',
+		place : '511 - Torre 1',
 		subjects : [
 			'Google Cloud', 'Inteligencia Artificial'
 		],
@@ -407,7 +407,7 @@ var events = [
 		speaker : 'Pablo Villanueva',
 		day : '31',
 		time : '11:45',
-		place : '511 - Torre 1',
+		place : 'Anexo Cafetería 07',
 		subjects : [
 			'Inteligencia Artificial', 'Android'
 		],
@@ -420,7 +420,7 @@ var events = [
 		speaker : 'Diego Ramírez',
 		day : '31',
 		time : '12:30',
-		place : 'Jardín de Ceremonias',
+		place : '401 - Torre 1',
 		subjects : [],
 		tba : '0'
 	},
@@ -430,7 +430,7 @@ var events = [
 		speaker : 'Andrés Castellanos',
 		day : '31',
 		time : '12:30',
-		place : '401 - Torre 1',
+		place : '511 - Torre 1',
 		subjects : [
 			'Inteligencia Artificial'
 		],
@@ -442,10 +442,32 @@ var events = [
 		speaker : 'Víctor Peñaloza',
 		day : '31',
 		time : '12:30',
-		place : '511 - Torre 1',
+		place : 'Anexo Cafetería 07',
 		subjects : [
 			'Inteligencia Artificial'
 		],
+		tba : '0'
+	},
+	
+	{
+		name : 'Introducción a Inteligencia Artificial',
+		description : '',
+		speaker : 'Juan Ñahui',
+		day : '31',
+		time : '09:00',
+		place : '510 - Torre 1',
+		subjects : [
+			'Inteligencia Artificial'
+		],
+		tba : '0'
+	},
+	{
+		name : 'Pendiente de anunciar',
+		description : '',
+		day : '31',
+		time : '10:30',
+		place : '510 - Torre 1',
+		subjects : [],
 		tba : '0'
 	},
 
