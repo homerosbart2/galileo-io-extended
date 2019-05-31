@@ -293,9 +293,9 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'Resolución de problemas a través de la Ingeniería',
-		description : '',
-		speaker : 'Walter Cordero',
+		name : 'Speechless',
+		description : 'Contenido de calidad, dado por expertos... sin las limitantes de una presentación!',
+		speaker : '',
 		day : '31',
 		time : '09:00',
 		place : 'Anexo Cafetería 07',
@@ -340,9 +340,9 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'El papel de la Inteligencia Artificial en la actualidad',
-		description : '',
-		speaker : 'Evelin Juárez',
+		name : 'Speechless',
+		description : 'Contenido de calidad, dado por expertos... sin las limitantes de una presentación!',
+		speaker : '',
 		day : '31',
 		time : '09:45',
 		place : 'Anexo Cafetería 07',
@@ -389,8 +389,9 @@ var events = [
 		tba : '0'
 	},
 	{
-		name : 'Pendiente de anunciar',
+		name : 'Resolución de problemas a través de la Ingeniería',
 		description : '',
+		speaker : 'Walter Cordero',
 		day : '31',
 		time : '10:30',
 		place : '510 - Torre 1',
@@ -431,6 +432,18 @@ var events = [
 		place : 'Anexo Cafetería 07',
 		subjects : [
 			'Inteligencia Artificial', 'Android'
+		],
+		tba : '0'
+	},
+	{
+		name : 'El papel de la Inteligencia Artificial en la actualidad',
+		description : '',
+		speaker : 'Evelin Juárez',
+		day : '31',
+		time : '11:45',
+		place : '510 - Torre 1',
+		subjects : [
+			'Inteligencia Artificial'
 		],
 		tba : '0'
 	},
