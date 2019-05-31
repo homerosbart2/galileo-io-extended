@@ -302,6 +302,18 @@ var events = [
 		subjects : [],
 		tba : '0'
 	},
+	{
+		name : 'Introducción a Inteligencia Artificial',
+		description : '',
+		speaker : 'Juan Ñahui',
+		day : '31',
+		time : '09:00',
+		place : '510 - Torre 1',
+		subjects : [
+			'Inteligencia Artificial'
+		],
+		tba : '0'
+	},
 
 	{
 		name : 'Design Thinking (continuación de taller)',
@@ -376,6 +388,15 @@ var events = [
 		],
 		tba : '0'
 	},
+	{
+		name : 'Pendiente de anunciar',
+		description : '',
+		day : '31',
+		time : '10:30',
+		place : '510 - Torre 1',
+		subjects : [],
+		tba : '0'
+	},
 
 	{
 		name : 'La web cumplió 30 años, se casó, tuvo hijos y no te diste cuenta',
@@ -446,28 +467,6 @@ var events = [
 		subjects : [
 			'Inteligencia Artificial'
 		],
-		tba : '0'
-	},
-	
-	{
-		name : 'Introducción a Inteligencia Artificial',
-		description : '',
-		speaker : 'Juan Ñahui',
-		day : '31',
-		time : '09:00',
-		place : '510 - Torre 1',
-		subjects : [
-			'Inteligencia Artificial'
-		],
-		tba : '0'
-	},
-	{
-		name : 'Pendiente de anunciar',
-		description : '',
-		day : '31',
-		time : '10:30',
-		place : '510 - Torre 1',
-		subjects : [],
 		tba : '0'
 	},
 
