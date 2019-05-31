@@ -2,7 +2,6 @@ var staff = [
           {
                     name : 'Stuardo Rodríguez',
                     information : '',
-                    image : 'StuardoRodriguez.jpg',
                     email : '-',
                     company : '-',
                     nationality : 'guatemala'
