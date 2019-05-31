@@ -267,7 +267,6 @@ var events = [
 		],
 		tba : '0'
 	},
-
 	{
 		name : 'Design Thinking - metodologías y prácticas para innovar',
 		description : 'Taller introductorio y creativo para entender Design Thinking y descubrir herramientas para identificar retos y desarrollar soluciones innovadoras',
@@ -482,7 +481,18 @@ var events = [
 		],
 		tba : '0'
 	},
-
+	{
+		name : 'Design Thinking - metodologías y prácticas para innovar',
+		description : 'Taller introductorio y creativo para entender Design Thinking y descubrir herramientas para identificar retos y desarrollar soluciones innovadoras',
+		speaker : 'Kenza Zouaoui',
+		day : '31',
+		time : '12:30',
+		place : '510 - Torre 1',
+		subjects : [
+			'Design Thinking'
+		],
+		tba : '0'
+	},
 	{
 		name : 'Creando aplicaciones sin servidores con Google Cloud Functions',
 		description : 'Vamos a conocer un servicio de Google Cloud Platform que nos permite realizar tareas con funciones de backend alojadas sobre Google Cloud.',
