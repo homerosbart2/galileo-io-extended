@@ -506,9 +506,9 @@ var events = [
 		tba: '0'
 	},
 	{
-		name: 'Qué es el aprendizaje automático y cómo puedo usarlo para que ella o él me amen',
-		description: 'Enseñando a programar a niños descubrió nuevas formas de enseñar. Curso básico sobre inteligencia artificial animada.',
-		speaker: 'Juan Ñahui',
+		name: 'Blockchain',
+		description: '',
+		speaker: 'Stuardo Rodríguez',
 		day: '31',
 		time: '18:30',
 		place: 'Anexo Cafetería 07',
