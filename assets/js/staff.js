@@ -1,5 +1,13 @@
 var staff = [
           {
+                    name : 'Stuardo Rodríguez',
+                    information : '',
+                    image : 'StuardoRodriguez.jpg',
+                    email : '-',
+                    company : '-',
+                    nationality : 'guatemala'
+          },
+          {
         name: 'Ximena Orjuela',
         information: 'Publicista, Relacionista Pública. Cuenta con varios años de experiencia en el sector de las comunicaciones, organización y ejecución de programas de emprendimiento, corporativos y tecnología a nivel Latam.',
         image: 'Ximena Orjuela.jpeg',
