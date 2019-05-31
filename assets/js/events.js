@@ -274,7 +274,7 @@ var events = [
 		speaker : 'Kenza Zouaoui',
 		day : '31',
 		time : '09:00',
-		place : 'Jardín de Ceremonias',
+		place : '401 - Torre 1',
 		subjects : [
 			'Design Thinking'
 		],
@@ -286,7 +286,7 @@ var events = [
 		speaker : 'José Antonio Bagur',
 		day : '31',
 		time : '09:00',
-		place : '401 - Torre 1',
+		place : '511 - Torre 1',
 		subjects : [
 			'Maker'
 		],
@@ -298,7 +298,7 @@ var events = [
 		speaker : 'Walter Cordero',
 		day : '31',
 		time : '09:00',
-		place : '511 - Torre 1',
+		place : 'Anexo Cafetería 07',
 		subjects : [],
 		tba : '0'
 	},
@@ -309,7 +309,7 @@ var events = [
 		speaker : 'Kenza Zouaoui',
 		day : '31',
 		time : '09:45',
-		place : 'Jardín de Ceremonias',
+		place : '401 - Torre 1',
 		subjects : [
 			'Design Thinking'
 		],
@@ -321,7 +321,7 @@ var events = [
 		speaker : 'Isabel Palomar',
 		day : '31',
 		time : '09:45',
-		place : '401 - Torre 1',
+		place : '511 - Torre 1',
 		subjects : [
 			'Inteligencia Artificial', 'Android'
 		],
@@ -333,7 +333,7 @@ var events = [
 		speaker : 'Evelin Juárez',
 		day : '31',
 		time : '09:45',
-		place : '511 - Torre 1',
+		place : 'Anexo Cafetería 07',
 		subjects : [
 			'Inteligencia Artificial'
 		],
@@ -346,7 +346,7 @@ var events = [
 		speaker : 'Ximena Orjuela',
 		day : '31',
 		time : '10:30',
-		place : 'Jardín de Ceremonias',
+		place : '401 - Torre 1',
 		subjects : [
 			'Innovación'
 		],
@@ -358,7 +358,7 @@ var events = [
 		speaker : 'Sandy Mérida',
 		day : '31',
 		time : '10:30',
-		place : '401 - Torre 1',
+		place : '511 - Torre 1',
 		subjects : [
 			'IoT', 'Android'
 		],
@@ -370,7 +370,7 @@ var events = [
 		speaker : 'Frank Calderón',
 		day : '31',
 		time : '10:30',
-		place : '511 - Torre 1',
+		place : 'Anexo Cafetería 07',
 		subjects : [
 			'Web'
 		],
