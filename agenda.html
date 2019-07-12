@@ -107,14 +107,9 @@
         html += '<i style="font-size: 18px;" class="far fa-moon"></i> Noche'
         html += '</span>';
         html += '</span>';
-
-        var cont = 0;
         
         events.forEach((event)=>{
-            if(cont == 0){
-                cont++;
-
-                if(event.tba != '1'){
+            if(event.tba != '1'){
                 var hour = parseInt(event.time.substring(0, 2));
                 if(hour >= 12){
                     ap = 'PM';
@@ -155,16 +150,16 @@
 
                 html += (night)? '<span class="event-card night">' : '<span class="event-card shown">';
 
-                // var speaker;
-                // var finded = false;
-                // for(var i = 0; i < staff.length; i++){
-                //     //console.log(event.speaker);
-                //     speaker = staff[i];
-                //     if(speaker.name == event.speaker){
-                //         finded = true;
-                //         break;
-                //     }
-                // }
+                var speaker;
+                var finded = false;
+                for(var i = 0; i < staff.length; i++){
+                    //console.log(event.speaker);
+                    speaker = staff[i];
+                    if(speaker.name == event.speaker){
+                        finded = true;
+                        break;
+                    }
+                }
 
                 
                 html += (night)? '<span class="event-time night">' : '<span class="event-time">';
@@ -201,24 +196,22 @@
                 }
 
                 
-                // if(finded){
-                //     html += '<span class="event-speaker">';
-                //     html += '<span class="staff-image">';
-                //     html += (speaker.image == null)? '' : `<img class="img" img-path="assets/img/${speaker.image}" src="assets/img/${speaker.image}">`;
-                //     html += '</span>';
-                //     html += '<span class="staff-name">';
-                //     html += speaker.name;
-                //     // html += '<span class="staff-expand">Ver más</span>';
-                //     html += '</span>';
-                //     html += '</span>';
-                // }
+                if(finded){
+                    html += '<span class="event-speaker">';
+                    html += '<span class="staff-image">';
+                    html += (speaker.image == null)? '' : `<img class="img" img-path="assets/img/${speaker.image}" src="assets/img/${speaker.image}">`;
+                    html += '</span>';
+                    html += '<span class="staff-name">';
+                    html += speaker.name;
+                    // html += '<span class="staff-expand">Ver más</span>';
+                    html += '</span>';
+                    html += '</span>';
+                }
 
                 html += '</span>';
 
                 html += '</span>';
             }
-            }
-            
         });
 
         element.innerHTML = html;
