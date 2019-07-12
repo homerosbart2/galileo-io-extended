@@ -107,115 +107,115 @@
         html += '<i style="font-size: 18px;" class="far fa-moon"></i> Noche'
         html += '</span>';
         html += '</span>';
+        
+        events.forEach((event)=>{
+            if(event.tba != '1'){
+                var hour = parseInt(event.time.substring(0, 2));
+                if(hour >= 12){
+                    ap = 'PM';
+                    if(hour >= 18){
+                        night = true;
+                    }else{
+                        night = false;
+                    }
+                    hour = (hour > 12)? hour - 12 : hour;
+                }else{
+                    ap = 'AM';
+                    night = false;
+                }
+                var strHour = (hour < 10)? `0${hour}` : `${hour}`;
+                var strMinutes = event.time.substring(3, 5);
+                var strTime = `${strHour}:${strMinutes}`;
+
+                if(oldMinutes == strMinutes && oldHour == hour){
+                    strHour = '';
+                    strMinutes = '';
+                    strTime = '';
+                    ap = '';
+                }else{
+                    oldHour = hour;
+                    oldMinutes = strMinutes;
+                }
+
+                if(oldDay != event.day){
+                    if(separationCount > 0) html += '</span>';
+                    separationCount++;
+                    html += (separationCount == 1)? `<span n="${separationCount}" class="day-card shown">` : `<span n="${separationCount}" class="day-card">`;
+                    html += '<span class="event-date">';
+                    if(event.day == 30) html += 'Jueves, 30 de mayo';
+                    else if(event.day == 31) html += 'Viernes, 31 de mayo';
+                    html += '</span>';
+                    oldDay = event.day;
+                }
+
+                html += (night)? '<span class="event-card night">' : '<span class="event-card shown">';
+
+                var speaker;
+                var finded = false;
+                for(var i = 0; i < staff.length; i++){
+                    //console.log(event.speaker);
+                    speaker = staff[i];
+                    if(speaker.name == event.speaker){
+                        finded = true;
+                        break;
+                    }
+                }
+
+                
+                html += (night)? '<span class="event-time night">' : '<span class="event-time">';
+                html += '<span class="time">';
+                html += strTime;
+                html += '</span>';
+                html += '<span class="m">';
+                html += ap;
+                html += '</span>';
+                html += '</span>';
+
+                html += '<span class="event-information">';
+                html += '<span class class="date">';
+                html += '</span>';
+                html += '<span class="event-title">'; 
+                html += event.name;
+                html += '</span>';
+                html += '<span class="subjects-container">';
+                html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
+                html += event.place;
+                html += '</span>';
+                event.subjects.forEach((subject)=>{
+                    html += '<span class="event-subject">';
+                    html += (subjects[subject] == null)?  '<i style="color: gray;" class="fas fa-circle"></i>' : `<i style="color: #${subjects[subject]};" class="fas fa-circle"></i>`;
+                    html += subject;
+                    html += '</span>';
+                });
+                html += '</span>';
+
+                if(event.description != 'TBA' && event.description != '' && event.description != null){
+                    html += '<span class="event-description">';
+                    html += event.description;
+                    html += '</span>';
+                }
+
+                
+                if(finded){
+                    html += '<span class="event-speaker">';
+                    html += '<span class="staff-image">';
+                    html += (speaker.image == null)? '' : `<img class="img" img-path="assets/img/${speaker.image}" src="assets/img/${speaker.image}">`;
+                    html += '</span>';
+                    html += '<span class="staff-name">';
+                    html += speaker.name;
+                    // html += '<span class="staff-expand">Ver más</span>';
+                    html += '</span>';
+                    html += '</span>';
+                }
+
+                html += '</span>';
+
+                html += '</span>';
+            }
+        });
 
         element.innerHTML = html;
         element.parentElement.setAttribute('style', 'opacity: 1; transform: translateY(0); z-index: 1;');
-        
-        // events.forEach((event)=>{
-        //     if(event.tba != '1'){
-        //         var hour = parseInt(event.time.substring(0, 2));
-        //         if(hour >= 12){
-        //             ap = 'PM';
-        //             if(hour >= 18){
-        //                 night = true;
-        //             }else{
-        //                 night = false;
-        //             }
-        //             hour = (hour > 12)? hour - 12 : hour;
-        //         }else{
-        //             ap = 'AM';
-        //             night = false;
-        //         }
-        //         var strHour = (hour < 10)? `0${hour}` : `${hour}`;
-        //         var strMinutes = event.time.substring(3, 5);
-        //         var strTime = `${strHour}:${strMinutes}`;
-
-        //         if(oldMinutes == strMinutes && oldHour == hour){
-        //             strHour = '';
-        //             strMinutes = '';
-        //             strTime = '';
-        //             ap = '';
-        //         }else{
-        //             oldHour = hour;
-        //             oldMinutes = strMinutes;
-        //         }
-
-        //         if(oldDay != event.day){
-        //             if(separationCount > 0) html += '</span>';
-        //             separationCount++;
-        //             html += (separationCount == 1)? `<span n="${separationCount}" class="day-card shown">` : `<span n="${separationCount}" class="day-card">`;
-        //             html += '<span class="event-date">';
-        //             if(event.day == 30) html += 'Jueves, 30 de mayo';
-        //             else if(event.day == 31) html += 'Viernes, 31 de mayo';
-        //             html += '</span>';
-        //             oldDay = event.day;
-        //         }
-
-        //         html += (night)? '<span class="event-card night">' : '<span class="event-card shown">';
-
-        //         var speaker;
-        //         var finded = false;
-        //         for(var i = 0; i < staff.length; i++){
-        //             //console.log(event.speaker);
-        //             speaker = staff[i];
-        //             if(speaker.name == event.speaker){
-        //                 finded = true;
-        //                 break;
-        //             }
-        //         }
-
-                
-        //         html += (night)? '<span class="event-time night">' : '<span class="event-time">';
-        //         html += '<span class="time">';
-        //         html += strTime;
-        //         html += '</span>';
-        //         html += '<span class="m">';
-        //         html += ap;
-        //         html += '</span>';
-        //         html += '</span>';
-
-        //         html += '<span class="event-information">';
-        //         html += '<span class class="date">';
-        //         html += '</span>';
-        //         html += '<span class="event-title">'; 
-        //         html += event.name;
-        //         html += '</span>';
-        //         html += '<span class="subjects-container">';
-        //         html += '<span class="event-ubication"><i class="fas fa-map-marker"></i>';
-        //         html += event.place;
-        //         html += '</span>';
-        //         event.subjects.forEach((subject)=>{
-        //             html += '<span class="event-subject">';
-        //             html += (subjects[subject] == null)?  '<i style="color: gray;" class="fas fa-circle"></i>' : `<i style="color: #${subjects[subject]};" class="fas fa-circle"></i>`;
-        //             html += subject;
-        //             html += '</span>';
-        //         });
-        //         html += '</span>';
-
-        //         if(event.description != 'TBA' && event.description != '' && event.description != null){
-        //             html += '<span class="event-description">';
-        //             html += event.description;
-        //             html += '</span>';
-        //         }
-
-                
-        //         if(finded){
-        //             html += '<span class="event-speaker">';
-        //             html += '<span class="staff-image">';
-        //             html += (speaker.image == null)? '' : `<img class="img" img-path="assets/img/${speaker.image}" src="assets/img/${speaker.image}">`;
-        //             html += '</span>';
-        //             html += '<span class="staff-name">';
-        //             html += speaker.name;
-        //             // html += '<span class="staff-expand">Ver más</span>';
-        //             html += '</span>';
-        //             html += '</span>';
-        //         }
-
-        //         html += '</span>';
-
-        //         html += '</span>';
-        //     }
-        // });
 
         // html += '</span>';
         // html += '</span>';
