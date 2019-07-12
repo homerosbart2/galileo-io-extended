@@ -107,9 +107,14 @@
         html += '<i style="font-size: 18px;" class="far fa-moon"></i> Noche'
         html += '</span>';
         html += '</span>';
+
+        var cont = 0;
         
         events.forEach((event)=>{
-            if(event.tba != '1'){
+            if(cont == 0){
+                cont++;
+
+                if(event.tba != '1'){
                 var hour = parseInt(event.time.substring(0, 2));
                 if(hour >= 12){
                     ap = 'PM';
@@ -212,6 +217,8 @@
 
                 html += '</span>';
             }
+            }
+            
         });
 
         element.innerHTML = html;
