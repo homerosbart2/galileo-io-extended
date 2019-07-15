@@ -499,7 +499,7 @@ var events = [
 		speaker: 'Lesly Zerna',
 		day: '31',
 		time: '18:30',
-		place: '502 - Torre 1',
+		place: '511 - Torre 1',
 		subjects: [
 			'Innovación'
 		],
@@ -535,7 +535,7 @@ var events = [
 		speaker: 'Ceci Castillo',
 		day: '31',
 		time: '19:30',
-		place: '502 - Torre 1',
+		place: '511 - Torre 1',
 		subjects: [
 			'Android'
 		],
@@ -571,7 +571,7 @@ var events = [
 		speaker: 'Diego Coy',
 		day: '31',
 		time: '20:10',
-		place: '502 - Torre 1',
+		place: '511 - Torre 1',
 		subjects: [
 			'Web'
 		],

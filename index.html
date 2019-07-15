@@ -529,12 +529,8 @@
         var element = $('#dynamic-information');
         //element.find('.section-title').html('STAFF');
         var html = '';
-        
-        
         html += '<span class="staff-container">';
-
         html += '<p class="helper">Para ver más información sobre el conferencista presiona sobre su imagen.</p>'
-
         orderStaff.forEach(element => {
             html += `<span class="staff-card ${element.job}">`;
             //html += `<img class="staff-bg" src="assets/img/${element.image}">`;
